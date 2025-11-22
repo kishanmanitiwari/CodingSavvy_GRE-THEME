@@ -1,58 +1,134 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="font-montserrat fixed top-0 right-0 left-0 z-30 backdrop-blur bg-black/4">
-      <nav className="container mx-auto flex items-center justify-between px-5 py-6 text-white">
-        <div>
-          <button>
-            <div className="mr-5 xl:hidden">
-              <div className="h-0.5 w-4 rounded bg-white"></div>
-              <div className="my-1 h-0.5 w-4 rounded bg-white"></div>
-              <div className="h-0.5 w-4 rounded bg-white"></div>
-            </div>
-          </button>
-          <Link href="/" className="text-2xl font-[900]">
-            PM Prep
-          </Link>
-        </div>
-        <ul className="hidden gap-12 font-[600] capitalize lg:text-lg xl:flex xl:text-xl 2xl:text-2xl">
+    <div className="font-montserrat sticky top-0 right-0 left-0 z-60 bg-gradient-to-b from-[#081329] to-[#081329]">
+      <nav className="relative container mx-auto flex items-center justify-between px-5 py-6 text-white">
+        <Link href="/" className="text-2xl font-[900]">
+          PM Prep
+        </Link>
+
+        <ul className="hidden gap-8 font-[600] capitalize lg:text-lg xl:flex">
           <li>
-            <a href="#" className="underline hover:underline">
+            <a href="#" className="hover:scale-105 transition-all duration-200 ease-in">
               Universe course
             </a>
           </li>
           <li>
             <a
               href="#private-personalised-tutoring"
-              className="hover:underline"
+              className="hover:scale-105 transition-all duration-200 ease-in"
             >
               Private personalised tutoring
             </a>
           </li>
           <li>
-            <a href="#courses" className="hover:underline">
+            <a href="#courses" className="hover:scale-105 transition-all duration-200 ease-in">
               Student results
             </a>
           </li>
           <li>
-            <a href="#instructor" className="hover:underline">
+            <a
+              href="#instructor"
+              className="hover:scale-105 transition-all duration-200 ease-in"
+            >
               Instructor
             </a>
           </li>
           <li>
-            <a href="#testimonials" className="hover:underline">
+            <a
+              href="#testimonials"
+              className="hover:scale-105 transition-all duration-200 ease-in"
+            >
               Contact
             </a>
           </li>
         </ul>
-        <Link
-          href="/dashboard"
-          className="rounded-md border border-white px-3 py-1 text-sm font-[400] lg:text-lg xl:flex xl:text-xl 2xl:text-2xl"
-        >
-          Login
-        </Link>
+
+        <div className="flex items-center gap-4">
+          <Link
+            href="/dashboard"
+            className="rounded-md border border-white px-3 py-1 text-sm font-[400] lg:text-base"
+          >
+            Login
+          </Link>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="focus:outline-none xl:hidden"
+            aria-label="Toggle menu"
+          >
+            <div className="flex flex-col items-center justify-center">
+              <div
+                className={`h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? "translate-y-1.5 rotate-45" : ""}`}
+              ></div>
+              <div
+                className={`my-1 h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? "scale-x-0" : ""}`}
+              ></div>
+              <div
+                className={`h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? "-translate-y-1.5 -rotate-45" : ""}`}
+              ></div>
+            </div>
+          </button>
+        </div>
       </nav>
+
+      <div
+        className={`absolute top-full left-0 w-full overflow-hidden border-b border-gray-800 bg-[#09152d] text-sm text-white transition-all duration-500 ease-in-out lg:text-base xl:hidden ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <ul className="flex flex-col gap-6 p-6 text-center font-[600] capitalize">
+          <li>
+            <a
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className="block py-2 hover:text-gray-300"
+            >
+              Universe course
+            </a>
+          </li>
+          <li>
+            <a
+              href="#private-personalised-tutoring"
+              onClick={() => setIsOpen(false)}
+              className="block py-2 hover:text-gray-300"
+            >
+              Private personalised tutoring
+            </a>
+          </li>
+          <li>
+            <a
+              href="#courses"
+              onClick={() => setIsOpen(false)}
+              className="block py-2 hover:text-gray-300"
+            >
+              Student results
+            </a>
+          </li>
+          <li>
+            <a
+              href="#instructor"
+              onClick={() => setIsOpen(false)}
+              className="block py-2 hover:text-gray-300"
+            >
+              Instructor
+            </a>
+          </li>
+          <li>
+            <a
+              href="#testimonials"
+              onClick={() => setIsOpen(false)}
+              className="block py-2 hover:text-gray-300"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
@@ -66,16 +142,7 @@ export function FooterNav() {
           <Link href="/" className="text-xl font-[400] md:text-2xl">
             PM Prep
           </Link>
-          <ul className="flex gap-3 sm:gap-8">
-            <li>
-              <a href="#">
-                <img
-                  className="h-6 w-6 sm:h-7 sm:w-7 md:h-auto md:w-auto"
-                  src="/icons/facebook.svg"
-                  alt="Facebook"
-                />
-              </a>
-            </li>
+          <ul className="flex items-center gap-3 sm:gap-8">
             <li>
               <a href="#">
                 <img
@@ -89,8 +156,8 @@ export function FooterNav() {
               <a href="#">
                 <img
                   className="h-6 w-6 sm:h-7 sm:w-7 md:h-auto md:w-auto"
-                  src="/icons/twitter.svg"
-                  alt="X (Twitter)"
+                  src="/icons/youtube.svg"
+                  alt="Youtube"
                 />
               </a>
             </li>
@@ -98,8 +165,8 @@ export function FooterNav() {
               <a href="#">
                 <img
                   className="h-6 w-6 sm:h-7 sm:w-7 md:h-auto md:w-auto"
-                  src="/icons/youtube.svg"
-                  alt="Youtube"
+                  src="/icons/linkedin-nav.svg"
+                  alt="LinkedIn"
                 />
               </a>
             </li>
@@ -109,33 +176,33 @@ export function FooterNav() {
         {/* Main */}
         <div className="mt-4.5 gap-16 pb-24 sm:flex">
           <div className="mb-5 flex flex-col gap-5">
-            <div>
+            <div className="max-w-xl">
               <h4 className="mb-2 text-lg font-[500] uppercase md:text-xl">
-                Company
+                Important Links
               </h4>
-              <ul className="flex flex-wrap gap-3 text-base font-[400] text-[#A19FBA] md:flex-row md:gap-6 md:text-lg">
+              <ul className="flex flex-col flex-wrap gap-3 text-base font-[400] text-[#A19FBA] capitalize sm:flex-row md:flex-row md:gap-6 md:gap-y-2 md:text-lg">
                 <li>
-                  <a href={"#"}>Home</a>
+                  <a href={"#testimonials"}>Home</a>
                 </li>
                 <li>
-                  <a href={"#courses"}>Courses</a>
+                  <a href={"#"}>Universe course</a>
                 </li>
                 <li>
-                  <a href={"#about"}>About Us</a>
+                  <a href={"#courses"}>Private personalised tutoring</a>
                 </li>
                 <li>
-                  <a href={"#testimonials"}>Testimonials</a>
+                  <a href={"#about"}>Student results</a>
+                </li>
+                <li>
+                  <a href={"#testimonials"}>Instructor</a>
                 </li>
               </ul>
             </div>
             <div>
               <h4 className="mb-2 text-lg font-[500] uppercase md:text-xl">
-                Important Links
+                Other Links
               </h4>
               <ul className="flex flex-wrap gap-3 text-base font-[400] text-[#A19FBA] md:text-lg">
-                <li>
-                  <Link href="#">Faq's</Link>
-                </li>
                 <li>
                   <Link href="#">Privacy Policy</Link>
                 </li>
