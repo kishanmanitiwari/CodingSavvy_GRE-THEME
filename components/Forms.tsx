@@ -47,7 +47,7 @@ export function LeadGenerationForm() {
       <h2 className="mb-6 text-center text-2xl font-[900] text-[#1B438F] capitalize sm:text-4xl">
         Request demo session
       </h2>
-      <form className="text-sm-0 flex flex-col gap-2 text-[#1F1D39]">
+      <form className="text-sm-0 flex @container flex-col gap-2 text-[#1F1D39]">
         <div>
           <label className="block" htmlFor="name">
             Name
@@ -60,7 +60,7 @@ export function LeadGenerationForm() {
             id="name"
           />
         </div>
-        <div className="gap-2 gap-x-4 sm:flex">
+        <div className="gap-2 gap-x-4 @min-[25rem]:flex">
           <div className="mb-2 flex-2/3 sm:mb-0">
             <label className="block" htmlFor="email">
               Email ID

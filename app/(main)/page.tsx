@@ -70,7 +70,7 @@ export default function Home() {
             id="private-personalised-tutoring"
             className="px-fluid-container pt-12 pb-21 scroll-mt-16"
           >
-            <div className="flex flex-wrap items-center justify-center gap-12 text-[#1F1D39]">
+            <div className="flex max-lg:flex-wrap items-center justify-center gap-8 xl:gap-12 text-[#1F1D39]">
               <article className="inline-block rounded-2xl bg-white px-6 py-5 text-lg font-[400] shadow-lg shadow-[#1B438F4D] sm:px-8 sm:py-10 md:rounded-3xl md:px-12 md:py-12">
                 <h2 className="text-xl-0 pb-8 text-center leading-tight font-[900] text-[#1B438F]">
                   Private Personalized Tutoring
@@ -105,7 +105,7 @@ export default function Home() {
       <div className="bg-gradient-to-b from-[#1c4490] to-[#0f2247]">
         <section
           id="testimonials"
-          className="relative scroll-mt-28 flex items-center justify-center overflow-hidden pt-8 pb-16"
+          className="relative scroll-mt-28 flex items-center justify-center overflow-hidden pt-8 sm:pt-0 pb-16"
         >
           <TestimonialCarousel
             testimonialsData={[

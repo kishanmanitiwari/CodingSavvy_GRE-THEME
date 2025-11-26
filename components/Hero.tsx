@@ -7,7 +7,7 @@ export default function Hero() {
       <section className="px-fluid-container grid-cols-5 items-center justify-between text-white md:min-h-[83lvh] lg:grid">
         <header className="col-span-3 mb-12 w-full pt-16 lg:mb-0 lg:pt-0">
           <h1 className="text-hero leading-[1.125] mb-2 font-[900] text-[#FF9053] uppercase">
-            GRE Universe course
+            GRE Universe <div>course</div>
           </h1>
           <p className="text-lg-0 mb-3.5 max-w-[95%] leading-tight font-[600] text-balance">
             Your Entire GRE Universe In One Course — Everything You Need,
