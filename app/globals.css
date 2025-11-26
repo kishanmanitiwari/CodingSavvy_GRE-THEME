@@ -22,6 +22,8 @@
   --text-card-base-1: clamp(1rem, 0.8684rem + 0.6579vw, 1.5rem);
   --text-card-base-2: clamp(1rem, 0.7697rem + 1.1513vw, 1.875rem);
 
+  --text-nav-0: clamp(0.875rem, -0.1723rem + 1.3514vw, 1.125rem);
+
   --spacing-fluid-container: clamp(1.25rem, -0.4156rem + 8.3278vw, 9.0938rem);
   --spacing-sm: clamp(1rem, 0.9343rem + 0.3287vw, 1.25rem);
 }

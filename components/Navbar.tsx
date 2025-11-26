@@ -23,12 +23,12 @@ export default function Navbar() {
           PM Prep
         </Link>
 
-        <ul className="hidden gap-8 font-[600] capitalize xl:flex 2xl:text-lg">
+        <ul className="hidden gap-8 text-nav-0 font-[600] capitalize min-[1240px]:flex">
           {navLinks.map(({ href, label }, index) => (
             <li key={index}>
               <Link
                 href={href}
-                className="transition-all duration-200 ease-in hover:scale-105"
+                className="hover:underline"
               >
                 {label}
               </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
           </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="focus:outline-none xl:hidden"
+            className="focus:outline-none min-[1240px]:hidden"
             aria-label="Toggle menu"
           >
             <div className="flex flex-col items-center justify-center">
@@ -64,7 +64,7 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`absolute top-full left-0 w-full overflow-hidden border-b border-gray-800 bg-[#09152d] text-sm text-white transition-all duration-500 ease-in-out lg:text-base xl:hidden ${
+        className={`absolute top-full left-0 w-full overflow-hidden border-b border-gray-800 bg-[#09152d] text-sm text-white transition-all duration-500 ease-in-out min-[1240px]:hidden lg:text-base ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
