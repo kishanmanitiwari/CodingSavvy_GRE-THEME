@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "GRE",
-  description: "World's Most Affordable Complete GRE Prep at 599/- per month.",
+  description: "Punit Mishra Prep: Your complete GRE prep solution. Join the GRE Universe Course or get 1:1 tutoring from Punit Mishra, a 337/340 GRE scorer.",
 };
 
 export default function RootLayout({
