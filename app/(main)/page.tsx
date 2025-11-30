@@ -28,7 +28,7 @@ export default function Home() {
       imgSrc: "/images/siddharth.jpeg",
       title: "The Blueprint for My GRE Success.",
       description:
-        "Initially, I was very confused, but then I discovered Millionaire GRE, and it worked like magic. Without using any flattery, I can say that the strategies for both the quant and verbal sections led to a tremendous improvement. I would personally recommend Millionaire GRE.",
+        "Initially, I was very confused, but then I discovered Punit Mishra Prep, and it worked like magic. Without using any flattery, I can say that the strategies for both the quant and verbal sections led to a tremendous improvement. I would personally recommend Punit Mishra Prep.",
       greScore: 328,
       designation: "",
       name: "Siddharth Kumar",
@@ -58,7 +58,7 @@ export default function Home() {
       imgSrc: "/images/pranit-jain.jpeg",
       title: "Structure Meets Empathy.",
       description:
-        "Punit Sir is an incredibly supportive GRE coach who is flexible and tailors study plans and class timings to your needs. His material is well-structured, and he excels at creating personalized workflows to keep you on track. He’s also one of the rare teachers available even on WhatsApp for doubt-solving and motivational support.",
+        "Punit Sir is an incredibly supportive GRE coach who is flexible and tailors study plans and class timings to your needs. His material is well-structured, and he excels at creating personalized workflows to keep you on track. He's also one of the rare teachers available even on WhatsApp for doubt-solving and motivational support.",
       greScore: 336,
       designation: "Investment Analyst, IFC",
       name: "Pranit Jain",
