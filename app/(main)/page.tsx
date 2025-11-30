@@ -25,7 +25,7 @@ export default function Home() {
 
   const testimonialsData = [
     {
-      imgSrc: "/images/siddharth.jpeg",
+      imgSrc: "/images/siddharth.webp",
       title: "The Blueprint for My GRE Success.",
       description:
         "Initially, I was very confused, but then I discovered Punit Mishra Prep, and it worked like magic. Without using any flattery, I can say that the strategies for both the quant and verbal sections led to a tremendous improvement. I would personally recommend Punit Mishra Prep.",
@@ -35,7 +35,7 @@ export default function Home() {
       linkedin: "https://www.linkedin.com/in/siddharth-kumar-a68099145/ ",
     },
     {
-      imgSrc: "/images/sameer-jain.jpg",
+      imgSrc: "/images/sameer-jain.webp",
       title: "Personalized Plan, Foundational Results.",
       description:
         "Punit created a clear, personalized study plan that accounted for my work schedule. What stood out was his unique ability to identify and correct the root cause of my mistakes at a fundamental level. Highly recommended!",
@@ -45,7 +45,7 @@ export default function Home() {
       linkedin: "https://www.linkedin.com/in/sameer-jain-bb153716a/",
     },
     {
-      imgSrc: "/images/aryani.jpeg",
+      imgSrc: "/images/aryani.webp",
       title: "Deep Content Mastery, Simplified Learning.",
       description:
         "Punit has a deep understanding of the GRE content and structure, effectively guiding students through challenging sections. He truly sets himself apart by breaking down complex concepts into easy-to-understand explanations, fostering confidence and motivation.",
@@ -55,7 +55,7 @@ export default function Home() {
       linkedin: "https://www.linkedin.com/in/aaryani-dogra-08426717b/",
     },
     {
-      imgSrc: "/images/pranit-jain.jpeg",
+      imgSrc: "/images/pranit-jain.webp",
       title: "Structure Meets Empathy.",
       description:
         "Punit Sir is an incredibly supportive GRE coach who is flexible and tailors study plans and class timings to your needs. His material is well-structured, and he excels at creating personalized workflows to keep you on track. He's also one of the rare teachers available even on WhatsApp for doubt-solving and motivational support.",
@@ -65,7 +65,7 @@ export default function Home() {
       linkedin: "https://www.linkedin.com/in/pranit-jain14/",
     },
     {
-      imgSrc: "/images/sandesh.jpeg",
+      imgSrc: "/images/sandesh.webp",
       title: "Complex Concepts Made Simple.",
       description:
         "Punit's ability to break down complex concepts into easily understandable parts is key. He tailors his methods to suit individual learning needs, ensuring steady progress and building confidence for test day. Thanks to his guidance, I was able to approach the GRE with clarity and determination.",
@@ -107,7 +107,7 @@ export default function Home() {
               <InfoCard
                 title="Affordable"
                 description="High quality prep at a fair price."
-                imgSrc="/images/money-bag.png"
+                imgSrc="/images/money-bag.webp"
               />
             </div>
           </section>
@@ -168,8 +168,9 @@ export default function Home() {
             <div className="flex flex-wrap-reverse justify-center gap-8">
               <div className="flex aspect-[2.05/1] max-h-72 justify-center overflow-hidden rounded-xl">
                 <img
+                  loading="lazy"
                   className="w-full object-contain"
-                  src={"/images/score-card.png"}
+                  src={"/images/score-card.webp"}
                   alt="Score card"
                 />
               </div>

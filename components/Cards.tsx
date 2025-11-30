@@ -92,14 +92,16 @@ export function TestimonialCard({
   imgSrc,
 }: TestimonialCardProps) {
   return (
-    <article className="isolate grid w-[90%] mt-2 max-w-4xl grid-cols-10 gap-3 rounded-2xl bg-white px-5 py-3 transition-all ease-in hover:scale-105 sm:gap-12 sm:px-8 sm:py-6 md:px-15 md:py-7 lg:px-12 lg:py-8">
+    <article className="isolate mt-2 grid w-[90%] max-w-4xl grid-cols-10 gap-3 rounded-2xl bg-white px-5 py-3 transition-all ease-in hover:scale-105 sm:gap-12 sm:px-8 sm:py-6 md:px-15 md:py-7 lg:px-12 lg:py-8">
       <div className="relative col-span-4">
         <img
+          loading="lazy"
           className="absolute top-0 -left-5"
           src="/icons/quote.png"
           alt="quote"
         />
         <img
+          loading="lazy"
           className="absolute top-[10%] h-[calc(90%+min(7vw,70px))] max-w-[100%] rounded-full object-cover"
           src={imgSrc}
           alt={name}
@@ -116,6 +118,7 @@ export function TestimonialCard({
           </p>
           <a className="inline-block" href={linkedin} target="_blank">
             <img
+              loading="lazy"
               className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-8 lg:w-8"
               src="/icons/linkedin.svg"
               alt="LinkedIn"
