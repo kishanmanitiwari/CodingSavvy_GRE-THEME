@@ -6,30 +6,30 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: "/#courses", label: "Universe course" },
+    { href: "/", label: "Home" },
     {
-      href: "/#private-personalised-tutoring",
-      label: "Private personalised tutoring",
+      href: "/#courses",
+      label: "Courses",
     },
-    { href: "/#testimonials", label: "Student results" },
-    { href: "/#instructor", label: "Instructor" },
+    { href: "/#features", label: "Features" },
+    { href: "/#testimonials", label: "Testimonials" },
     { href: "/#request-demo-form", label: "Contact" },
   ];
 
   return (
     <div className="font-montserrat sticky top-0 right-0 left-0 z-60 bg-gradient-to-b from-[#081329] to-[#081329]">
       <nav className="px-fluid-container relative flex items-center justify-between py-6 text-white">
-        <Link href="/" className="text-2xl font-[900]">
-          PM Prep
+        <Link href="/" className="text-xl font-[900] text-center">
+          <div>
+            <p>CODING SAVVY</p>
+            <p className="text-sm">Be a Savvy Coder!</p>
+          </div>
         </Link>
 
-        <ul className="hidden gap-8 text-nav-0 font-[600] capitalize min-[1240px]:flex">
+        <ul className="text-nav-0 hidden gap-8 font-[600] capitalize min-[1240px]:flex">
           {navLinks.map(({ href, label }, index) => (
             <li key={index}>
-              <Link
-                href={href}
-                className="hover:underline"
-              >
+              <Link href={href} className="hover:underline">
                 {label}
               </Link>
             </li>
