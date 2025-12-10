@@ -5,14 +5,28 @@ import { LeadGenerationForm } from "@/components/Forms";
 import Hero from "@/components/Hero";
 
 export default function Home() {
-  const privatePersonalizedTutoring = [
-    "1:1 Private Classes",
-    "1/2/3/4 Classes per Week, Customized to Your Convenience (1 Hour Each)",
-    "Personalized Study Plan Based on the Student's Strengths and Weaknesses",
-    "Time Management and Test-Taking Strategies",
-    "Mock Evaluations",
-    "Doubt Clearing",
-    "Complete Study Material",
+  const tableData = [
+    [
+      "Placement Supreme - 6 month intensive flagship program.",
+      "Placement assistance with mock interviews and job prep.",
+    ],
+    [
+      "Internship Program with project-based learning.",
+      "Real-world sprints, case studies, and portfolio building.",
+    ],
+    [
+      "Java Full Stack, DevOps, and Mobile App Development tracks.",
+      "Recorded sessions plus live support for every cohort.",
+    ],
+    [
+      "Languages & stacks: C++, Java, TypeScript, JavaScript, Spring Boot, Next.js, Node.js.",
+      "Free career mentorship and resume reviews.",
+    ],
+    ["MOU with 5+ colleges.", "1000+ students trained."],
+    [
+      "100+ students placed.",
+      "Community support that continues after graduation.",
+    ],
   ];
 
   const testimonialsData = [
@@ -111,37 +125,100 @@ export default function Home() {
           <div className="px-fluid-container flex items-center justify-center py-24 lg:min-h-[90vh]">
             <CourseFeaturesCard />
           </div>
-          <section
-            id="private-personalised-tutoring"
-            className="px-fluid-container scroll-mt-16 pt-12 pb-21"
-          >
-            <div className="flex items-center justify-center gap-8 text-[#1F1D39] max-lg:flex-wrap xl:gap-12">
-              <article className="inline-block rounded-2xl bg-white px-6 py-5 text-lg font-[400] shadow-lg shadow-[#1B438F4D] sm:px-8 sm:py-10 md:rounded-3xl md:px-12 md:py-12">
-                <h2 className="text-xl-0 pb-8 text-center leading-tight font-[900] text-[#1B438F]">
-                  Private Personalized Tutoring
-                </h2>
-                <ul className="divide-y divide-[#1B438F33] border-y border-y-[#1B438F33]">
-                  {privatePersonalizedTutoring.map((data, key) => (
-                    <li key={key} className="">
-                      <div
-                        key={`${data}-${key}`}
+
+          <section className="bg-white pt-21 pb-16">
+            <div className="px-fluid-container">
+              {/* mobile view */}
+              <div className="text-[#1F1D39] md:hidden md:aria-hidden">
+                <article className="w-full">
+                  <h2 className="text-xl-0 pb-8 leading-tight font-[900] text-[#1B438F]">
+                    Programs & Tracks
+                  </h2>
+                  <ul className="mb-8 divide-y divide-[#1B438F33] border-y border-y-[#1B438F33]">
+                    {tableData.map((data, i) => (
+                      <li
+                        key={`${data[0]}-${i}`}
                         className="text-sm-0 px-2.5 py-2 text-pretty"
                       >
                         <div className="flex items-center gap-2.5">
                           <div className="min-h-2.5 min-w-2.5 gap-2.5 rounded-full border border-[#FF9053] bg-[#FF90534D]"></div>
-                          <p>{data}</p>
+                          <p>{data[0]}</p>
                         </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-                <div className="pt-8 pr-2.5 text-white">
-                  <ButtonLink href="/#request-demo-form" label="Know more" />
-                </div>
-              </article>
-              <div id="request-demo-form" className="scroll-mt-28">
-                <LeadGenerationForm />
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="text-white">
+                    <ButtonLink href="#" label="Apply Now" />
+                  </div>
+                </article>
+                <article className="w-full">
+                  <h2 className="text-xl-0 mt-12 pb-8 leading-tight font-[900] text-[#1B438F]">
+                    Career Outcomes
+                  </h2>
+                  <ul className="mb-8 divide-y divide-[#1B438F33] border-y border-y-[#1B438F33]">
+                    {tableData.map((data, i) => (
+                      <li
+                        key={`${data[1]}-${i}`}
+                        className="text-sm-0 px-2.5 py-2 text-pretty"
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <div className="min-h-2.5 min-w-2.5 gap-2.5 rounded-full border border-[#FF9053] bg-[#FF90534D]"></div>
+                          <p>{data[1]}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                  <ButtonLink
+                    href="#"
+                    label="Download brochure"
+                    bgColor="#fff"
+                  />
+                </article>
               </div>
+
+              {/* desktop view */}
+              <table className="hidden max-md:aria-hidden w-full text-[#1F1D39] md:table">
+                <thead>
+                  <tr>
+                    <th className="text-xl-0 pb-8 text-start text-4xl font-[900] text-[#1B438F]">
+                      Programs & Tracks
+                    </th>
+                    <th className="text-xl-0 pb-8 text-start text-4xl font-[900] text-[#1B438F]">
+                      Career Outcomes
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-sm-0">
+                  {tableData.map((row, key) => (
+                    <tr key={key} className="divide-x divide-[#1B438F33]">
+                      {row.map((data, i) => (
+                        <td
+                          key={`${data}-${i}`}
+                          className="border-y border-y-[#1B438F33] px-2.5 py-2"
+                        >
+                          <div className="flex items-center gap-2.5">
+                            <div className="min-h-2.5 min-w-2.5 gap-2.5 rounded-full border border-[#FF9053] bg-[#FF90534D]"></div>
+                            <p>{data}</p>
+                          </div>
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+
+                  <tr>
+                    <td className="py-8 pr-2.5 text-white">
+                      <ButtonLink href="#" label="Apply now" />
+                    </td>
+                    <td className="py-6 pl-2.5">
+                      <ButtonLink
+                        href="#"
+                        label="Download brochure"
+                        bgColor="#fff"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </section>
         </div>
