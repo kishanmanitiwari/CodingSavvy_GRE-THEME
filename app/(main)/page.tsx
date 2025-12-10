@@ -162,37 +162,6 @@ export default function Home() {
         >
           <TestimonialCarousel testimonialsData={testimonialsData} />
         </section>
-
-        <section id="instructor" className="scroll-mt-16">
-          <article className="px-fluid-container min-h-[450px] bg-white py-12 sm:pt-21">
-            <div className="flex flex-wrap-reverse justify-center gap-8">
-              <div className="flex aspect-[2.05/1] max-h-72 justify-center overflow-hidden rounded-xl">
-                <img
-                  loading="lazy"
-                  className="w-full object-contain"
-                  src={"/images/score-card.webp"}
-                  alt="Score card"
-                />
-              </div>
-              <div className="col-span-2">
-                <h3 className="text-xl-0 mb-6 font-[900] text-[#1B438F]">
-                  Punit Mishra
-                </h3>
-                <ul className="divide-y divide-[#1B438F33] border-y border-y-[#1B438F33] text-[#1F1D39]">
-                  {about.map((point, index) => (
-                    <li
-                      key={index}
-                      className="text-sm-0 flex items-center gap-2.5 px-2.5 py-2"
-                    >
-                      <div className="min-h-2.5 min-w-2.5 gap-2.5 rounded-full border border-[#FF9053] bg-[#FF90534D]"></div>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </article>
-        </section>
       </div>
     </>
   );
