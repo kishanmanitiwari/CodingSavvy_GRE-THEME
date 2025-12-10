@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <div className="font-montserrat sticky top-0 right-0 left-0 z-60 bg-gradient-to-b from-[#081329] to-[#081329]">
       <nav className="px-fluid-container relative flex items-center justify-between py-6 text-white">
-        <Link href="/" className="text-xl font-[900] text-center">
+        <Link href="/" className="text-center text-xl font-[900]">
           <div>
             <p>CODING SAVVY</p>
             <p className="text-sm">Be a Savvy Coder!</p>
@@ -92,25 +92,21 @@ export function FooterNav() {
       <footer className="px-fluid-container bg-black/15 pt-13 text-white backdrop:blur sm:px-8 md:px-12 lg:px-36">
         {/* Header */}
         <div className="mb-5 flex items-center justify-between border-b border-b-white pb-8">
-          <Link href="/" className="text-xl font-[400] md:text-2xl">
-            PM Prep
+          <Link href="/" className="text-center text-xl font-[900]">
+            <div>
+              <p>CODING SAVVY</p>
+              <p className="text-sm">Be a Savvy Coder!</p>
+            </div>
           </Link>
+
+          {/* Social Links */}
           <ul className="flex items-center gap-3 sm:gap-8">
             <li>
-              <Link href="#">
+              <Link href="https://www.instagram.com/codingsavvy/">
                 <img
                   className="h-6 w-6 sm:h-7 sm:w-7 md:h-auto md:w-auto"
                   src="/icons/instagram.svg"
                   alt="Instagram"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <img
-                  className="h-6 w-6 sm:h-7 sm:w-7 md:h-auto md:w-auto"
-                  src="/icons/youtube.svg"
-                  alt="Youtube"
                 />
               </Link>
             </li>
@@ -138,18 +134,16 @@ export function FooterNav() {
                   <Link href={"/"}>Home</Link>
                 </li>
                 <li>
-                  <Link href={"/#courses"}>Universe course</Link>
+                  <Link href={"/#courses"}>Courses</Link>
                 </li>
                 <li>
-                  <Link href={"/#private-personalised-tutoring"}>
-                    Private personalised tutoring
-                  </Link>
+                  <Link href={"/#private-personalised-tutoring"}>Features</Link>
                 </li>
                 <li>
-                  <Link href={"/#testimonials"}>Student results</Link>
+                  <Link href={"/#testimonials"}>Testimonials</Link>
                 </li>
                 <li>
-                  <Link href={"/#instructor"}>Instructor</Link>
+                  <Link href={"/#instructor"}>Contact</Link>
                 </li>
               </ul>
             </div>
@@ -174,13 +168,13 @@ export function FooterNav() {
             <div>
               <h4 className="mb-2 text-lg font-[500] md:text-xl">Mail</h4>
               <p className="text-base text-[#A19FBA] md:text-lg">
-                hello@punitmishraprep.com
+                hello@codingsavvy.com
               </p>
             </div>
             <div>
               <h4 className="mb-2 text-lg font-[500] md:text-xl">Phone</h4>
               <p className="text-base font-[400] text-[#A19FBA] md:text-lg">
-                +91 - 9910 917 049
+                +91 - 9022 821 921
               </p>
             </div>
           </div>
