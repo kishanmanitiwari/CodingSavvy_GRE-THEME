@@ -78,27 +78,27 @@ export default function Home() {
             className="px-fluid-container flex flex-col items-center lg:pb-5"
           >
             <h2 className="text-xl-0 mb-10 text-center leading-tight font-[900] text-white capitalize md:mb-16 lg:mb-20">
-              Why join Universe Course?
+              Why choose Coding Savvy?
             </h2>
             <div className="row-auto grid max-w-fit grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
               <InfoCard
-                title="Realistic Strategies"
-                description="No fluff, just proven techniques that work."
+                title="Placement Supreme"
+                description="Flagship 6-month bootcamp with placement assistance."
                 imgSrc="/images/chess-fill.svg"
               />
               <InfoCard
-                title="Beginner Friendly"
-                description="A supportive environment for all skill levels."
+                title="Career Mentorship"
+                description="Free mentorship, mock interviews, and resume support."
                 imgSrc="/images/star-badge.svg"
               />
               <InfoCard
-                title="Comprehensive"
-                description="Covers everything you need, nothing you don't."
+                title="Recorded + Live Learning"
+                description="Recorded sessions plus live support and internship paths."
                 imgSrc="/images/book-education.png"
               />
               <InfoCard
-                title="Affordable"
-                description="High quality prep at a fair price."
+                title="College Partnerships"
+                description="MOU with 5+ colleges; 1000+ learners and 100+ placements."
                 imgSrc="/images/money-bag.webp"
               />
             </div>
