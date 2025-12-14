@@ -12,7 +12,7 @@ export default function Navbar() {
       label: "Courses",
     },
     { href: "/#features", label: "Features" },
-    { href: "/#testimonials", label: "Testimonials" },
+    { href: "/#testimonials", label: "Testimonial" },
     { href: "/#request-demo-form", label: "Contact" },
   ];
 
@@ -38,7 +38,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4">
           <Link
-            href="#"
+            href="https://lms-auth.vercel.app/"
             className="rounded-md border border-white px-3 py-1 text-sm font-[400] lg:text-base"
           >
             Login

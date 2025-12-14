@@ -15,7 +15,7 @@ export default function Hero() {
             flagship Placement Supreme with placement assistance.
           </p>
           <div className="text-sm-0 flex w-[40%] max-w-lg gap-4">
-            <ButtonLink href="/#request-demo-form" label="Apply now" />
+            <ButtonLink href="https://docs.google.com/forms/d/e/1FAIpQLSf6-IXA7_9FxqOYE3jdcxQH0QRJ-azcaBb2KfxkVdXSYwufQw/viewform" label="Apply now" />
             <ButtonLink
               href="/#request-demo-form"
               label="View programs"
