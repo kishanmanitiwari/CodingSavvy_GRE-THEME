@@ -75,60 +75,61 @@ export function CourseFeaturesCard() {
 interface TestimonialCardProps {
   title: string;
   description: string;
-  greScore: number | `${number}`;
   name: string;
   linkedin: string;
-  designation: string;
   imgSrc: string;
 }
 
 export function TestimonialCard({
   title,
   description,
-  greScore,
   name,
-  designation,
   linkedin,
   imgSrc,
 }: TestimonialCardProps) {
   return (
-    <article className="isolate mt-2 grid w-[90%] max-w-4xl grid-cols-10 gap-3 rounded-2xl bg-white px-5 py-3 transition-all ease-in hover:scale-105 sm:gap-12 sm:px-8 sm:py-6 md:px-15 md:py-7 lg:px-12 lg:py-8">
-      <div className="relative col-span-4">
+    <article className="isolate mt-2 flex w-[90%] max-w-4xl flex-col items-center gap-5 rounded-2xl border border-[#E7ECF4] bg-white px-6 py-6 shadow-lg shadow-[#1B438F0D] transition-all duration-300 ease-in hover:scale-105 hover:shadow-2xl hover:shadow-[#1B438F15] sm:flex-row sm:items-stretch sm:gap-8 sm:px-8 sm:py-7 md:px-14 md:py-10 lg:gap-10">
+      <div className="relative flex flex-shrink-0 justify-center sm:w-40 sm:justify-start md:w-48">
         <img
           loading="lazy"
-          className="absolute top-0 -left-5"
+          className="absolute -top-1 -left-1 -z-10 h-6 w-6 sm:-top-3 sm:-left-3 sm:h-10 sm:w-10"
           src="/icons/quote.png"
           alt="quote"
         />
         <img
           loading="lazy"
-          className="absolute top-[10%] h-[calc(90%+min(7vw,70px))] max-w-[100%] rounded-full object-cover"
+          className="h-32 w-32 rounded-full object-cover ring-4 ring-[#FF9053] sm:h-40 sm:w-40 md:h-48 md:w-48"
           src={imgSrc}
           alt={name}
         />
       </div>
-      <section className="col-span-6">
-        <h3 className="text-card-base-1 mb-3 font-[800]">{title}</h3>
-        <p className="text-card-xs-n1 mb-5 font-[400] text-[#626262] italic">
-          {description}
-        </p>
-        <div className="mb-3.5 text-[#1B438F]">
-          <p className="text-card-base-2 base mr-6 inline-block font-[900]">
-            {greScore}/340
+      <section className="flex min-w-0 flex-grow flex-col justify-between">
+        <div>
+          <h3 className="text-card-base-1 mb-3 line-clamp-2 font-[800]">
+            {title}
+          </h3>
+          <p className="text-card-xs-n1 mb-4 line-clamp-4 font-[400] text-[#626262] italic sm:line-clamp-none">
+            {description}
           </p>
-          <a className="inline-block" href={linkedin} target="_blank">
-            <img
-              loading="lazy"
-              className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-8 lg:w-8"
-              src="/icons/linkedin.svg"
-              alt="LinkedIn"
-            />
-          </a>
         </div>
-        <p className="text-card-xs-1 font-[900]">{name}</p>
-        <p className="text-xs font-[500] text-[#108267] sm:text-sm md:text-base xl:text-lg">
-          {designation}
-        </p>
+        <div>
+          <div className="mb-3 flex gap-4">
+          <p className="text-card-xs-1 text-black truncate font-[900]">{name}</p>
+            <a
+              className="inline-block flex-shrink-0"
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                loading="lazy"
+                className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7"
+                src="/icons/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
+        </div>
       </section>
     </article>
   );
