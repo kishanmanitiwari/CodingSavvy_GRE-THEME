@@ -31,54 +31,60 @@ export default function Home() {
 
   const testimonialsData = [
     {
-      imgSrc: "/images/siddharth.webp",
-      title: "The Blueprint for My GRE Success.",
+      imgSrc: "/images/dummy-modified.png",
+      title: "A True Game-Changer",
       description:
-        "Initially, I was very confused, but then I discovered Punit Mishra Prep, and it worked like magic. Without using any flattery, I can say that the strategies for both the quant and verbal sections led to a tremendous improvement. I would personally recommend Punit Mishra Prep.",
-      greScore: 328,
-      designation: "",
-      name: "Siddharth Kumar",
-      linkedin: "https://www.linkedin.com/in/siddharth-kumar-a68099145/ ",
+        "CodingSavvy is a game-changer! The platform's interactive coding challenges and engaging tutorials have significantly boosted my coding skills. I'm now more confident in tackling complex projects.",
+      name: "Gaurav",
     },
     {
-      imgSrc: "/images/sameer-jain.webp",
-      title: "Personalized Plan, Foundational Results.",
+      imgSrc: "/images/nupur.png",
+      title: "Totally Worth It",
       description:
-        "Punit created a clear, personalized study plan that accounted for my work schedule. What stood out was his unique ability to identify and correct the root cause of my mistakes at a fundamental level. Highly recommended!",
-      greScore: 321,
-      designation: "Growth Manager, Ten x You",
-      name: "Sameer Jain",
-      linkedin: "https://www.linkedin.com/in/sameer-jain-bb153716a/",
+        "It was totally helpful in terms of learning coding, basics of programming, and various other productive things as well. Totally worth it! Happy to be a part of Coding Savvy family.",
+      name: "Nupur",
     },
     {
-      imgSrc: "/images/aryani.webp",
-      title: "Deep Content Mastery, Simplified Learning.",
+      imgSrc: "/images/srushti.png",
+      title: "Fantastic Java Bootcamp",
       description:
-        "Punit has a deep understanding of the GRE content and structure, effectively guiding students through challenging sections. He truly sets himself apart by breaking down complex concepts into easy-to-understand explanations, fostering confidence and motivation.",
-      greScore: 318,
-      designation: "",
-      name: "Aaryani Dogra",
-      linkedin: "https://www.linkedin.com/in/aaryani-dogra-08426717b/",
+        "The Java DSA bootcamp was fantastic! Your clear explanations and practical examples made complex concepts easy to understand. Thank you so much for everything.",
+      name: "Srushti",
     },
     {
-      imgSrc: "/images/pranit-jain.webp",
-      title: "Structure Meets Empathy.",
+      imgSrc: "/images/devesh.png",
+      title: "Top-Notch Tutorials",
       description:
-        "Punit Sir is an incredibly supportive GRE coach who is flexible and tailors study plans and class timings to your needs. His material is well-structured, and he excels at creating personalized workflows to keep you on track. He's also one of the rare teachers available even on WhatsApp for doubt-solving and motivational support.",
-      greScore: 336,
-      designation: "Investment Analyst, IFC",
-      name: "Pranit Jain",
-      linkedin: "https://www.linkedin.com/in/pranit-jain14/",
+        "CodingSavvy's tutorials are top-notch. The step-by-step guidance and practical examples make learning complex coding concepts a breeze. I appreciate the platform's commitment to quality education.",
+      name: "Devesh",
     },
     {
-      imgSrc: "/images/sandesh.webp",
-      title: "Complex Concepts Made Simple.",
+      imgSrc: "/images/khushal.jpg",
+      title: "Simplified Complex Concepts",
       description:
-        "Punit's ability to break down complex concepts into easily understandable parts is key. He tailors his methods to suit individual learning needs, ensuring steady progress and building confidence for test day. Thanks to his guidance, I was able to approach the GRE with clarity and determination.",
-      greScore: 320,
-      designation: "Founder, Case Ace",
-      name: "Sandesh Dholakia",
-      linkedin: "https://www.linkedin.com/in/sandesh-dholakia/",
+        "CodingSavvy's tutorials simplify complex coding concepts with clear explanations and practical examples. Their commitment to quality education shines through in every lesson.",
+      name: "Khushal",
+    },
+    {
+      imgSrc: "/images/aadesh.png",
+      title: "Great for Beginners",
+      description:
+        "This training of web development is great for beginners because each and every concept is taught from very basic to advance level. Which helped me to understand difficult concepts easily.",
+      name: "Aadesh",
+    },
+    {
+      imgSrc: "/images/saurav.png",
+      title: "Honed My Skills",
+      description:
+        "My coding internship was great. I honed my front-end development skills, learned industry best practices, and gained practical experience with daily tasks and projects.",
+      name: "Saurav",
+    },
+    {
+      imgSrc: "/images/nikita.png",
+      title: "Amazing Internship Training",
+      description:
+        "This internship training was amazing! I learned new skills in a friendly environment and enjoyed every session. I didn't know much about web development before, but now I've learned a lot.",
+      name: "Nikita",
     },
   ];
 
@@ -129,7 +135,7 @@ export default function Home() {
           <section className="bg-white pt-21 pb-16">
             <div className="px-fluid-container">
               {/* mobile view */}
-              <div className="text-[#1F1D39] md:hidden md:aria-hidden">
+              <div className="md:aria-hidden text-[#1F1D39] md:hidden">
                 <article className="w-full">
                   <h2 className="text-xl-0 pb-8 leading-tight font-[900] text-[#1B438F]">
                     Programs & Tracks
@@ -177,7 +183,7 @@ export default function Home() {
               </div>
 
               {/* desktop view */}
-              <table className="hidden max-md:aria-hidden w-full text-[#1F1D39] md:table">
+              <table className="max-md:aria-hidden hidden w-full text-[#1F1D39] md:table">
                 <thead>
                   <tr>
                     <th className="text-xl-0 pb-8 text-start text-4xl font-[900] text-[#1B438F]">

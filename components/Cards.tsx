@@ -76,7 +76,6 @@ interface TestimonialCardProps {
   title: string;
   description: string;
   name: string;
-  linkedin: string;
   imgSrc: string;
 }
 
@@ -84,7 +83,6 @@ export function TestimonialCard({
   title,
   description,
   name,
-  linkedin,
   imgSrc,
 }: TestimonialCardProps) {
   return (
@@ -98,7 +96,7 @@ export function TestimonialCard({
         />
         <img
           loading="lazy"
-          className="h-32 w-32 rounded-full object-cover ring-4 ring-[#FF9053] sm:h-40 sm:w-40 md:h-48 md:w-48"
+          className="h-32 w-32 rounded-full object-cover ring-4 ring-[#1B438F] sm:h-40 sm:w-40 md:h-48 md:w-48"
           src={imgSrc}
           alt={name}
         />
@@ -108,26 +106,13 @@ export function TestimonialCard({
           <h3 className="text-card-base-1 mb-3 line-clamp-2 font-[800]">
             {title}
           </h3>
-          <p className="text-card-xs-n1 mb-4 line-clamp-4 font-[400] text-[#626262] italic sm:line-clamp-none">
+          <p className="text-sm-0 mb-4 line-clamp-4 font-semibold text-[#626262] italic sm:line-clamp-none lg:mb-8">
             {description}
           </p>
         </div>
         <div>
-          <div className="mb-3 flex gap-4">
-          <p className="text-card-xs-1 text-black truncate font-[900]">{name}</p>
-            <a
-              className="inline-block flex-shrink-0"
-              href={linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                loading="lazy"
-                className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7"
-                src="/icons/linkedin.svg"
-                alt="LinkedIn"
-              />
-            </a>
+          <div className="mb-3">
+            <p className="text-sm-0 truncate font-[900] text-black">{name}</p>
           </div>
         </div>
       </section>

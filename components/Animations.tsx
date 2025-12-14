@@ -6,10 +6,7 @@ interface TestimonialCardProps {
   testimonialsData: {
     title: string;
     description: string;
-    greScore: number | `${number}`;
     name: string;
-    linkedin: string;
-    designation: string;
     imgSrc: string;
   }[];
 }
