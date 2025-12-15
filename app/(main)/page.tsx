@@ -141,80 +141,79 @@ export default function Home() {
     <>
       <Hero />
       <main>
-        <div className="grid grid-cols-1 place-items-center bg-gradient-to-b from-[#1b428e] to-[#e7ecf4]">
-          <section className="container mx-auto flex flex-col items-center justify-between gap-12 px-5 py-12 lg:flex-row lg:gap-0 lg:py-20">
-            {/* Left Content - Visual Stack */}
-            {/* Using w-full and flex to center it, but distinct sizing for mobile/tablet/desktop */}
-            <div className="relative isolate flex w-full flex-col items-center justify-center lg:block lg:w-1/2">
-              {/* Circle Wrapper: Responsive text size for em-based spacing if needed, 
-                but primarily using responsive padding on the children */}
-              <div className="relative z-0 flex items-center justify-center lg:-ml-20 lg:block">
-                {/* Layer 1 (Outermost) */}
-                <div className="inline-block rounded-full bg-black/5 p-3 sm:p-5 lg:p-8">
-                  {/* Layer 2 */}
-                  <div className="inline-block rounded-full bg-black/5 p-3 sm:p-5 lg:p-8">
-                    {/* Layer 3 */}
-                    <div className="inline-block rounded-full bg-black/5 p-3 sm:p-5 lg:p-8">
-                      {/* Layer 4 */}
-                      <div className="inline-block rounded-full bg-black/5 p-3 sm:p-5 lg:p-8">
-                        {/* Layer 5 (Innermost border) */}
-                        <div className="relative inline-block rounded-full bg-black/5 p-3 sm:p-5 lg:p-8">
-                          {/* Main Image Container - RESPONSIVE WIDTHS/HEIGHTS HERE */}
-                          {/* Mobile: 200px, Tablet: 300px, Desktop: 400px */}
-                          <div className="flex h-[200px] w-[200px] items-center justify-center overflow-hidden rounded-full bg-gray-200 shadow-2xl sm:h-[300px] sm:w-[300px] lg:h-[400px] lg:w-[400px]">
-                            <img
-                              className="object-cover mt-[50%]"
-                              src="/images/kishan.webp"
-                              alt="Coding Savvy"
-                            />
-                          </div>
+        <div className="grid grid-cols-1 place-items-center overflow-hidden bg-gradient-to-b from-[#1b428e] to-[#e7ecf4]">
+          <section className="px-fluid-container mt-8 mb-16 w-full grid-cols-5 items-center md:grid">
+            {/* Image Section */}
+            <div className="h-image-fluid relative isolate col-span-3 mr-auto aspect-square max-md:mb-16 max-md:ml-auto">
+              {/* Rings */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute aspect-square h-[100%] rounded-full bg-black/5"></div>
+                <div className="absolute aspect-square h-[92.5%] rounded-full bg-black/5"></div>
+                <div className="absolute aspect-square h-[85%] rounded-full bg-black/5"></div>
+                <div className="absolute aspect-square h-[77.5%] rounded-full bg-black/5"></div>
+                <div className="absolute aspect-square h-[70%] rounded-full bg-black/5"></div>
+              </div>
 
-                          {/* Badge: Prof Punit */}
-                          <p className="absolute right-0 -bottom-[10%] z-10 rounded-full bg-white px-4 py-2 text-center text-xs font-[600] text-[#505866] shadow-lg sm:right-0 sm:bottom-10 sm:text-sm lg:-right-16 lg:bottom-14 lg:text-base">
-                            <span className="text-sm-0 block font-semibold">
-                              5
-                            </span>
-                            Courses
-                          </p>
-                        </div>
-
-                        {/* Badge: Students */}
-                        <p className="absolute top-[15%] right-[10%] rounded-full bg-[#CCE5FE] px-3 py-2 text-center text-xs font-medium text-[#16416B] shadow-sm sm:text-sm lg:text-base">
-                          <span className="text-sm-0 block font-semibold">
-                            50+
-                          </span>
-                          Schedules
-                        </p>
-                      </div>
-
-                      {/* Badge: Founder */}
-                      <p className="absolute bottom-5 left-[25%] w-max rounded-full bg-[#EFF7E2] px-3 py-2 text-center text-xs font-medium text-[#3C6C26] shadow-sm sm:text-sm lg:bottom-16 lg:text-base">
-                        <span className="text-sm-0 block font-semibold">
-                          10+
-                        </span>{" "}
-                        Trusted Tutors
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Badge: GRE Score */}
-                {/* Positioned absolutely relative to the main stack wrapper */}
-                <p className="absolute top-0 left-0 rounded-full bg-[#F8EFE2] px-3 py-2 text-center text-xs font-medium text-[#A1631C] capitalize shadow-sm sm:text-sm lg:top-10 lg:left-36 lg:text-base">
-                  <span className="text-sm-0 block font-semibold">300+</span>{" "}
-                  Success Stories
+              {/* badges */}
+              <div className="orbit absolute inset-0 z-10">
+                <p className="text-badge-0 absolute top-[20%] right-[0%] inline-flex flex-col items-center justify-center rounded-full bg-blue-200 px-3 py-2 text-center text-blue-900 sm:text-xs md:text-sm lg:text-base">
+                  <span className="block font-semibold">500+</span> Students
+                  Trained
                 </p>
+                <p className="text-badge-0 absolute bottom-[10%] left-[10%] inline-flex flex-col items-center justify-center rounded-full bg-green-200 px-3 py-2 text-center text-green-900 sm:text-xs md:text-sm lg:text-base">
+                  <span className="block font-semibold">100%</span> Placement
+                  Assistance
+                </p>
+                <p className="text-badge-0 absolute top-[10%] left-[5%] inline-flex flex-col items-center justify-center rounded-full bg-orange-200 px-3 py-2 text-center text-orange-900 sm:text-xs md:text-sm lg:text-base">
+                  <span className="block font-semibold">10+</span> Hiring
+                  Partner's{" "}
+                </p>
+                <p className="text-badge-0 absolute -right-[5%] bottom-[30%] inline-flex flex-col items-center justify-center rounded-full bg-teal-200 px-3 py-2 text-center text-teal-900 sm:text-xs md:text-sm lg:text-base">
+                  <span className="block font-semibold">100+</span> Live
+                  Projects Delivered
+                </p>
+                <p className="text-badge-0 absolute top-[0%] right-[30%] inline-flex flex-col items-center justify-center rounded-full bg-fuchsia-200 px-3 py-2 text-center text-fuchsia-900 sm:text-xs md:text-sm lg:text-base">
+                  <span className="block font-semibold">5+</span> College MOU's
+                </p>
+                <p className="text-badge-0 absolute bottom-[40%] -left-[7%] inline-flex flex-col items-center justify-center rounded-full bg-white px-3 py-2 text-center sm:text-xs md:text-sm lg:text-base">
+                  <span className="block font-semibold">300+ Hrs.</span>Live
+                  Recorded Session
+                </p>
+                <p className="text-badge-0 absolute right-[20%] bottom-[0%] inline-flex flex-col items-center justify-center rounded-full bg-yellow-200 px-3 py-2 text-center text-yellow-900 sm:text-xs md:text-sm lg:text-base">
+                  <span className="flex gap-1 font-semibold">
+                    <span>5</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      width={12}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-yellow-900"
+                    >
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                  </span>
+                  Google Reviews
+                </p>
+              </div>
+
+              {/* Image */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute aspect-square h-[62.5%] overflow-hidden rounded-full">
+                  <img src="/images/kishan.webp" alt="" />
+                </div>
               </div>
             </div>
 
-            {/* Right Content - Form */}
-            <div
-              id="request-demo-form"
-              className="z-10 flex w-full scroll-mt-32 justify-center lg:w-1/2 lg:justify-end"
-            >
+            {/* Form */}
+            <div className="col-span-2 flex items-center justify-center">
               <LeadGenerationForm />
             </div>
           </section>
+
           <section
             id="about"
             className="px-fluid-container flex flex-col items-center lg:pb-5"

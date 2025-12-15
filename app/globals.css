@@ -22,10 +22,14 @@
   --text-card-base-1: clamp(1rem, 0.8684rem + 0.6579vw, 1.5rem);
   --text-card-base-2: clamp(1rem, 0.7697rem + 1.1513vw, 1.875rem);
 
+  --text-badge-0: clamp(0.6rem, 0.4948rem + 0.5259vw, 1rem);
+
   --text-nav-0: clamp(0.875rem, -0.1723rem + 1.3514vw, 1.125rem);
 
   --spacing-fluid-container: clamp(1.25rem, -0.4156rem + 8.3278vw, 9.0938rem);
   --spacing-sm: clamp(1rem, 0.3878rem + 2.7211vw, 3rem);
+
+  --height-image-fluid: clamp(18.125rem, 11.5843rem + 32.7034vw, 43rem);
 }
 
 html {
@@ -45,10 +49,39 @@ aside:has(#menu-btn:checked) p {
 }
 
 @keyframes blink-animation {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
     opacity: 0;
+  }
+}
+
+.orbit {
+  animation: orbit-spin 120s linear infinite;
+}
+
+@keyframes orbit-spin {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.orbit > p {
+  animation: counter-spin 120s linear infinite;
+}
+
+@keyframes counter-spin {
+  0% {
+    rotate: 360deg;
+  }
+
+  100% {
+    rotate: 0deg;
   }
 }
