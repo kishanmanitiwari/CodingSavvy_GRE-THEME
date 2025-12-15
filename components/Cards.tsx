@@ -47,7 +47,7 @@ export function CourseFeaturesCard() {
   return (
     <Card>
       <h2 className="text-xl-0 mb-3 text-center leading-tight font-[900] text-[#1B438F] uppercase">
-        Coding Savvy Programs
+        Coding Savvy Job Bootcamp
       </h2>
       <p className="text-sm-0 sm:text-x text-center font-[600] text-pretty capitalize">
         Coding bootcamps built to get you job-ready

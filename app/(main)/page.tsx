@@ -291,18 +291,18 @@ export default function Home() {
             </h2>
             <div className="row-auto grid max-w-fit grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
               <InfoCard
-                title="Placement Supreme"
-                description="Flagship 6-month bootcamp with placement assistance."
+                title="Affordability & Quality"
+                description="Quality Job-focused Education at an affordable price"
                 imgSrc="/images/chess-fill.svg"
               />
               <InfoCard
-                title="Career Mentorship"
-                description="Free mentorship, mock interviews, and resume support."
+                title="Proven Track Record"
+                description="Backed by student success stories, placements."
                 imgSrc="/images/star-badge.svg"
               />
               <InfoCard
-                title="Recorded + Live Learning"
-                description="Recorded sessions plus live support and internship paths."
+                title="Live + Recorded Classes"
+                description="Live and recorded sessions with continuous TA support."
                 imgSrc="/images/book-education.png"
               />
               <InfoCard
