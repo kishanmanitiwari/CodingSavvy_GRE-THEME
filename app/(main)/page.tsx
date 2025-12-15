@@ -100,40 +100,107 @@ export default function Home() {
 
   const courseData = [
     {
-      title: "JAVA Fundamentals",
-      price: "₹999",
-      features: ["Introduction to Java", "Basic Concepts", "Hands-On Coding"],
+      title: "Placement Supreme",
+      price: "₹4,999",
+      features: [
+        "6-month flagship placement program",
+        "DSA+, Backend, DevOps & Aptitude",
+        "Live + recorded classes with doubt support",
+        "Projects, tests & mock interviews",
+      ],
       link: "https://forms.gle/R962pqs4W65peFsi6",
     },
     {
-      title: "Placement Preparation",
-      price: "₹4999",
+      title: "DSA+",
+      price: "₹2,999",
       features: [
-        "Java Fundamentals & OOPS",
-        "DSA & Algorithms",
-        "Core Subjects & Aptitude",
-        "Mock Interviews",
+        "Structured DSA for placements",
+        "Company-focused problems & contests",
+        "Patterns and complexity focused prep",
+        "Interview-style coding rounds",
       ],
     },
     {
-      title: "Full Stack Web Dev",
-      price: "₹7999",
+      title: "BackendX",
+      price: "₹2,999",
       features: [
-        "HTML, CSS & JavaScript",
-        "React JS & Node.js",
-        "MongoDB & PostgreSQL",
-        "AWS Cloud and Git",
+        "Spring Boot backend from scratch",
+        "REST APIs with DB and security",
+        "DevOps basics: CI/CD & Docker",
+        "Production-ready backend project",
       ],
     },
     {
-      title: "Mobile App Dev",
-      price: "₹4999",
+      title: "Live Industry Project Internship",
+      price: "Know more",
       features: [
-        "Flutter Stack",
-        "Backend with Firebase",
-        "App Deployment",
-        "Marketing Strategies",
+        "Live Gen-AI, Full Stack, DevOps & Mobile",
+        "Work in real industry-style teams",
+        "Performance-based stipend (where applicable)",
+        "Verified internship certificate",
       ],
+    },
+  ];
+
+  const placements = [
+    {
+      name: "Kushal Bhamare",
+      company: "Zensar Technologies",
+      package: "12 LPA",
+      quote:
+        "Cracked system design rounds with daily mocks and resume rewrites.",
+    },
+    {
+      name: "Shrushti Jalgaonkar",
+      company: "Accenture",
+      package: "5.5 LPA",
+      quote:
+        "The DSA drills and interview panels felt exactly like the real thing.",
+    },
+    {
+      name: "Aadesh",
+      company: "LTI MindTree",
+      package: "5.5 LPA",
+      quote: "Live code reviews fixed my gaps fast and boosted my confidence.",
+    },
+    {
+      name: "Saraswati",
+      company: "LTI MindTree",
+      package: "5 LPA",
+      quote: "Weekly checkpoints and peer practice made problem-solving a habit.",
+    },
+    {
+      name: "Girish Patil",
+      company: "Cognizant",
+      package: "5 LPA",
+      quote: "Company-specific prep packs and mock HR rounds sealed the deal.",
+    },
+    {
+      name: "Aaditya Shinde",
+      company: "LTI MindTree",
+      package: "4.5 LPA",
+      quote:
+        "Project storytelling practice helped me stand out in panel interviews.",
+    },
+    {
+      name: "Neha Phadtare",
+      company: "CoreFlex IT Solution’s",
+      package: "4 LPA",
+      quote: "Hands-on sprints and feedback loops kept me sharp for every round.",
+    },
+    {
+      name: "Renuka Joshi",
+      company: "BNY Melon",
+      package: "8 LPA",
+      quote:
+        "Focused mentorship on system design and behavioral rounds paid off.",
+    },
+    {
+      name: "Aayush",
+      company: "Tech Mahindra",
+      package: "4.5 LPA",
+      quote:
+        "Consistent mock interviews turned interview anxiety into muscle memory.",
     },
   ];
 
@@ -223,18 +290,18 @@ export default function Home() {
             </h2>
             <div className="row-auto grid max-w-fit grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
               <InfoCard
-                title="Placement Supreme"
-                description="Flagship 6-month bootcamp with placement assistance."
+                title="Affordability & Quality"
+                description="Quality Job-focused Education at an affordable price"
                 imgSrc="/images/chess-fill.svg"
               />
               <InfoCard
-                title="Career Mentorship"
-                description="Free mentorship, mock interviews, and resume support."
+                title="Proven Track Record"
+                description="Backed by student success stories, placements."
                 imgSrc="/images/star-badge.svg"
               />
               <InfoCard
-                title="Recorded + Live Learning"
-                description="Recorded sessions plus live support and internship paths."
+                title="Live + Recorded Classes"
+                description="Live and recorded sessions with continuous TA support."
                 imgSrc="/images/book-education.png"
               />
               <InfoCard
@@ -406,6 +473,64 @@ export default function Home() {
                     <ButtonLink href="#request-demo-form" label="Enroll Now" />
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section
+          id="placements"
+          className="bg-gradient-to-b from-[#e7ecf4] to-[#c6d2e8] py-20 lg:py-24"
+        >
+          <div className="px-fluid-container">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-2xl">
+                <p className="text-sm font-[700] uppercase text-[#FF9053] tracking-wide">
+                  Placements
+                </p>
+                <h2 className="text-xl-0 mt-2 leading-tight font-[900] text-[#1B438F]">
+                  Recent success stories
+                </h2>
+                <p className="text-base-0 mt-3 font-[600] text-[#1F1D39]/80">
+                  Placement-first training, mock interviews, and company-specific
+                  prep that get learners hired. More wins are on the way—here are
+                  the latest.
+                </p>
+              </div>
+              <div className="text-white">
+                <ButtonLink href="#request-demo-form" label="Get placement-ready" />
+              </div>
+            </div>
+
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {placements.map((item) => (
+                <article
+                  key={`${item.name}-${item.company}`}
+                  className="group relative rounded-2xl border border-white/50 bg-white/80 p-6 shadow-lg shadow-[#1B438F1A] backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm font-[800] uppercase text-[#1B438F]/80 tracking-wide">
+                        Placed at
+                      </p>
+                      <p className="text-lg font-[900] text-[#1F1D39]">
+                        {item.company}
+                      </p>
+                    </div>
+                    <span className="rounded-full bg-[#FF9053]/15 px-3 py-1 text-xs font-[800] text-[#FF9053]">
+                      {item.package}
+                    </span>
+                  </div>
+                  <p className="mt-4 text-card-base-0 font-[900] text-[#1B438F]">
+                    {item.name}
+                  </p>
+                  <p className="mt-2 text-sm-0 font-semibold text-[#626262] italic">
+                    {item.quote}
+                  </p>
+                  <div className="mt-4 h-px bg-gradient-to-r from-transparent via-[#1B438F33] to-transparent" />
+                  <p className="mt-3 text-xs font-[700] uppercase tracking-wide text-[#1B438F]/70">
+                    Placement | Mock Interviews | Career Mentorship
+                  </p>
+                </article>
               ))}
             </div>
           </div>

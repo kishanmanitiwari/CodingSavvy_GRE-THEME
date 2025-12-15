@@ -21,6 +21,24 @@ export default function Hero() {
               bgColor="#132E64"
             />
           </div>
+
+          {/* Hero Stats Row - hidden on mobile, visible from sm and up */}
+          <div className="mt-6 hidden flex-wrap items-center gap-6 text-[11px] font-semibold text-[#E5E7EB]/90 sm:flex">
+            <div className="flex items-baseline gap-1">
+              <span className="text-lg font-[900] text-white">1,000+</span>
+              <span className="uppercase tracking-wide">Learners Trained</span>
+            </div>
+            <span className="hidden h-1 w-1 rounded-full bg-[#E5E7EB]/60 sm:inline-block" />
+            <div className="flex items-baseline gap-1">
+              <span className="text-lg font-[900] text-white">100+</span>
+              <span className="uppercase tracking-wide">Successful Placements</span>
+            </div>
+            <span className="hidden h-1 w-1 rounded-full bg-[#E5E7EB]/60 sm:inline-block" />
+            <div className="flex items-baseline gap-1">
+              <span className="text-lg font-[900] text-white">50+</span>
+              <span className="uppercase tracking-wide">Hiring Companies</span>
+            </div>
+          </div>
         </header>
 
         {/* hero image - Replaced with stylized CSS composition */}
