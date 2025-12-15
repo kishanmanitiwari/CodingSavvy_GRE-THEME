@@ -11,8 +11,30 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "GRE",
-  description: "Punit Mishra Prep: Your complete GRE prep solution. Join the GRE Universe Course or get 1:1 tutoring from Punit Mishra, a 337/340 GRE scorer.",
+  title: "Coding Savvy",
+  description: "Placement-first coding bootcamps for students.",
+  openGraph: {
+    title: "Coding Savvy",
+    description: "Placement-first coding bootcamps for students.",
+    url: "https://codingsavvy.in",
+    siteName: "Coding Savvy",
+    images: [
+      {
+        url: "https://1ea8f57ec50e.ngrok-free.app/images/coding-savvy.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Coding Savvy",
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Coding Savvy",
+    description: "Placement-first coding bootcamps for students.",
+    images: ["https://1ea8f57ec50e.ngrok-free.app/images/coding-savvy.jpeg"],
+  },
 };
 
 export default function RootLayout({

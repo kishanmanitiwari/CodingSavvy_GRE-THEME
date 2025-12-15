@@ -3,76 +3,137 @@ import { ButtonLink } from "@/components/Button";
 import { CourseFeaturesCard, InfoCard } from "@/components/Cards";
 import { LeadGenerationForm } from "@/components/Forms";
 import Hero from "@/components/Hero";
+import Link from "next/link";
+
+const EnrollButton = ({ href, label }: { href: string; label: string }) => (
+  <Link
+    href={href}
+    className="mt-auto block w-full rounded-lg bg-gradient-to-r from-[#1B438F] to-[#132E64] py-3 text-center text-sm font-bold tracking-wider text-white uppercase shadow-md transition-all hover:-translate-y-0.5 hover:from-[#2B54A3] hover:to-[#1B438F] hover:shadow-lg"
+  >
+    {label}
+  </Link>
+);
 
 export default function Home() {
-  const privatePersonalizedTutoring = [
-    "1:1 Private Classes",
-    "1/2/3/4 Classes per Week, Customized to Your Convenience (1 Hour Each)",
-    "Personalized Study Plan Based on the Student's Strengths and Weaknesses",
-    "Time Management and Test-Taking Strategies",
-    "Mock Evaluations",
-    "Doubt Clearing",
-    "Complete Study Material",
-  ];
-
-  const about = [
-    "GRE Score: 337",
-    "Perfect 170 In Quant—Three Consecutive Times",
-    "4+ Years of GRE Teaching Experience",
-    "Mentored Over 1,200 Students",
-    "99th Percentile In CAT; Admitted to Multiple IIMs",
+  const tableData = [
+    [
+      "Placement Supreme - 6 month intensive flagship program.",
+      "Placement assistance with mock interviews and job prep.",
+    ],
+    [
+      "Internship Program with project-based learning.",
+      "Real-world sprints, case studies, and portfolio building.",
+    ],
+    [
+      "Java Full Stack, DevOps, and Mobile App Development tracks.",
+      "Recorded sessions plus live support for every cohort.",
+    ],
+    [
+      "Languages & stacks: C++, Java, TypeScript, JavaScript, Spring Boot, Next.js, Node.js.",
+      "Free career mentorship and resume reviews.",
+    ],
+    ["MOU with 5+ colleges.", "1000+ students trained."],
+    [
+      "100+ students placed.",
+      "Community support that continues after graduation.",
+    ],
   ];
 
   const testimonialsData = [
     {
-      imgSrc: "/images/siddharth.webp",
-      title: "The Blueprint for My GRE Success.",
+      imgSrc: "/images/dummy-modified.png",
+      title: "A True Game-Changer",
       description:
-        "Initially, I was very confused, but then I discovered Punit Mishra Prep, and it worked like magic. Without using any flattery, I can say that the strategies for both the quant and verbal sections led to a tremendous improvement. I would personally recommend Punit Mishra Prep.",
-      greScore: 328,
-      designation: "",
-      name: "Siddharth Kumar",
-      linkedin: "https://www.linkedin.com/in/siddharth-kumar-a68099145/ ",
+        "CodingSavvy is a game-changer! The platform's interactive coding challenges and engaging tutorials have significantly boosted my coding skills. I'm now more confident in tackling complex projects.",
+      name: "Gaurav",
     },
     {
-      imgSrc: "/images/sameer-jain.webp",
-      title: "Personalized Plan, Foundational Results.",
+      imgSrc: "/images/nupur.png",
+      title: "Totally Worth It",
       description:
-        "Punit created a clear, personalized study plan that accounted for my work schedule. What stood out was his unique ability to identify and correct the root cause of my mistakes at a fundamental level. Highly recommended!",
-      greScore: 321,
-      designation: "Growth Manager, Ten x You",
-      name: "Sameer Jain",
-      linkedin: "https://www.linkedin.com/in/sameer-jain-bb153716a/",
+        "It was totally helpful in terms of learning coding, basics of programming, and various other productive things as well. Totally worth it! Happy to be a part of Coding Savvy family.",
+      name: "Nupur",
     },
     {
-      imgSrc: "/images/aryani.webp",
-      title: "Deep Content Mastery, Simplified Learning.",
+      imgSrc: "/images/srushti.png",
+      title: "Fantastic Java Bootcamp",
       description:
-        "Punit has a deep understanding of the GRE content and structure, effectively guiding students through challenging sections. He truly sets himself apart by breaking down complex concepts into easy-to-understand explanations, fostering confidence and motivation.",
-      greScore: 318,
-      designation: "",
-      name: "Aaryani Dogra",
-      linkedin: "https://www.linkedin.com/in/aaryani-dogra-08426717b/",
+        "The Java DSA bootcamp was fantastic! Your clear explanations and practical examples made complex concepts easy to understand. Thank you so much for everything.",
+      name: "Srushti",
     },
     {
-      imgSrc: "/images/pranit-jain.webp",
-      title: "Structure Meets Empathy.",
+      imgSrc: "/images/devesh.png",
+      title: "Top-Notch Tutorials",
       description:
-        "Punit Sir is an incredibly supportive GRE coach who is flexible and tailors study plans and class timings to your needs. His material is well-structured, and he excels at creating personalized workflows to keep you on track. He's also one of the rare teachers available even on WhatsApp for doubt-solving and motivational support.",
-      greScore: 336,
-      designation: "Investment Analyst, IFC",
-      name: "Pranit Jain",
-      linkedin: "https://www.linkedin.com/in/pranit-jain14/",
+        "CodingSavvy's tutorials are top-notch. The step-by-step guidance and practical examples make learning complex coding concepts a breeze. I appreciate the platform's commitment to quality education.",
+      name: "Devesh",
     },
     {
-      imgSrc: "/images/sandesh.webp",
-      title: "Complex Concepts Made Simple.",
+      imgSrc: "/images/khushal.jpg",
+      title: "Simplified Complex Concepts",
       description:
-        "Punit's ability to break down complex concepts into easily understandable parts is key. He tailors his methods to suit individual learning needs, ensuring steady progress and building confidence for test day. Thanks to his guidance, I was able to approach the GRE with clarity and determination.",
-      greScore: 320,
-      designation: "Founder, Case Ace",
-      name: "Sandesh Dholakia",
-      linkedin: "https://www.linkedin.com/in/sandesh-dholakia/",
+        "CodingSavvy's tutorials simplify complex coding concepts with clear explanations and practical examples. Their commitment to quality education shines through in every lesson.",
+      name: "Khushal",
+    },
+    {
+      imgSrc: "/images/aadesh.png",
+      title: "Great for Beginners",
+      description:
+        "This training of web development is great for beginners because each and every concept is taught from very basic to advance level. Which helped me to understand difficult concepts easily.",
+      name: "Aadesh",
+    },
+    {
+      imgSrc: "/images/saurav.png",
+      title: "Honed My Skills",
+      description:
+        "My coding internship was great. I honed my front-end development skills, learned industry best practices, and gained practical experience with daily tasks and projects.",
+      name: "Saurav",
+    },
+    {
+      imgSrc: "/images/nikita.png",
+      title: "Amazing Internship Training",
+      description:
+        "This internship training was amazing! I learned new skills in a friendly environment and enjoyed every session. I didn't know much about web development before, but now I've learned a lot.",
+      name: "Nikita",
+    },
+  ];
+
+  const courseData = [
+    {
+      title: "JAVA Fundamentals",
+      price: "₹999",
+      features: ["Introduction to Java", "Basic Concepts", "Hands-On Coding"],
+      link: "https://forms.gle/R962pqs4W65peFsi6",
+    },
+    {
+      title: "Placement Preparation",
+      price: "₹4999",
+      features: [
+        "Java Fundamentals & OOPS",
+        "DSA & Algorithms",
+        "Core Subjects & Aptitude",
+        "Mock Interviews",
+      ],
+    },
+    {
+      title: "Full Stack Web Dev",
+      price: "₹7999",
+      features: [
+        "HTML, CSS & JavaScript",
+        "React JS & Node.js",
+        "MongoDB & PostgreSQL",
+        "AWS Cloud and Git",
+      ],
+    },
+    {
+      title: "Mobile App Dev",
+      price: "₹4999",
+      features: [
+        "Flutter Stack",
+        "Backend with Firebase",
+        "App Deployment",
+        "Marketing Strategies",
+      ],
     },
   ];
 
@@ -81,117 +142,280 @@ export default function Home() {
       <Hero />
       <main>
         <div className="grid grid-cols-1 place-items-center bg-gradient-to-b from-[#1b428e] to-[#e7ecf4]">
+          <section className="container mx-auto flex flex-col items-center justify-between gap-12 px-5 py-12 lg:flex-row lg:gap-0 lg:py-20">
+            {/* Left Content - Visual Stack */}
+            {/* Using w-full and flex to center it, but distinct sizing for mobile/tablet/desktop */}
+            <div className="relative isolate flex w-full flex-col items-center justify-center lg:block lg:w-1/2">
+              {/* Circle Wrapper: Responsive text size for em-based spacing if needed, 
+                but primarily using responsive padding on the children */}
+              <div className="relative z-0 flex items-center justify-center lg:-ml-20 lg:block">
+                {/* Layer 1 (Outermost) */}
+                <div className="inline-block rounded-full bg-black/5 p-3 sm:p-5 lg:p-8">
+                  {/* Layer 2 */}
+                  <div className="inline-block rounded-full bg-black/5 p-3 sm:p-5 lg:p-8">
+                    {/* Layer 3 */}
+                    <div className="inline-block rounded-full bg-black/5 p-3 sm:p-5 lg:p-8">
+                      {/* Layer 4 */}
+                      <div className="inline-block rounded-full bg-black/5 p-3 sm:p-5 lg:p-8">
+                        {/* Layer 5 (Innermost border) */}
+                        <div className="relative inline-block rounded-full bg-black/5 p-3 sm:p-5 lg:p-8">
+                          {/* Main Image Container - RESPONSIVE WIDTHS/HEIGHTS HERE */}
+                          {/* Mobile: 200px, Tablet: 300px, Desktop: 400px */}
+                          <div className="flex h-[200px] w-[200px] items-center justify-center overflow-hidden rounded-full bg-gray-200 shadow-2xl sm:h-[300px] sm:w-[300px] lg:h-[400px] lg:w-[400px]">
+                            <img
+                              className="object-cover"
+                              src="/images/coding-savvy.jpeg"
+                              alt="Coding Savvy"
+                            />
+                          </div>
+
+                          {/* Badge: Prof Punit */}
+                          <p className="absolute right-0 -bottom-[10%] z-10 rounded-full bg-white px-4 py-2 text-center text-xs font-[600] text-[#505866] shadow-lg sm:right-0 sm:bottom-10 sm:text-sm lg:-right-16 lg:bottom-14 lg:text-base">
+                            <span className="text-sm-0 block font-semibold">
+                              5
+                            </span>
+                            Courses
+                          </p>
+                        </div>
+
+                        {/* Badge: Students */}
+                        <p className="absolute top-[15%] right-[10%] rounded-full bg-[#CCE5FE] px-3 py-2 text-center text-xs font-medium text-[#16416B] shadow-sm sm:text-sm lg:text-base">
+                          <span className="text-sm-0 block font-semibold">
+                            50+
+                          </span>
+                          Schedules
+                        </p>
+                      </div>
+
+                      {/* Badge: Founder */}
+                      <p className="absolute bottom-5 left-[25%] w-max rounded-full bg-[#EFF7E2] px-3 py-2 text-center text-xs font-medium text-[#3C6C26] shadow-sm sm:text-sm lg:bottom-16 lg:text-base">
+                        <span className="text-sm-0 block font-semibold">
+                          10+
+                        </span>{" "}
+                        Trusted Tutors
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Badge: GRE Score */}
+                {/* Positioned absolutely relative to the main stack wrapper */}
+                <p className="absolute top-0 left-0 rounded-full bg-[#F8EFE2] px-3 py-2 text-center text-xs font-medium text-[#A1631C] capitalize shadow-sm sm:text-sm lg:top-10 lg:left-36 lg:text-base">
+                  <span className="text-sm-0 block font-semibold">300+</span>{" "}
+                  Success Stories
+                </p>
+              </div>
+            </div>
+
+            {/* Right Content - Form */}
+            <div
+              id="request-demo-form"
+              className="z-10 flex w-full scroll-mt-32 justify-center lg:w-1/2 lg:justify-end"
+            >
+              <LeadGenerationForm />
+            </div>
+          </section>
           <section
             id="about"
             className="px-fluid-container flex flex-col items-center lg:pb-5"
           >
-            <h2 className="text-xl-0 mb-10 text-center leading-tight font-[900] text-white capitalize md:mb-16 lg:mb-20">
-              Why join Universe Course?
+            <h2 className="text-xl-0 mb-10 text-center leading-tight font-[900] text-[#1B438F] capitalize md:mb-16 lg:mb-20">
+              Why choose Coding Savvy?
             </h2>
             <div className="row-auto grid max-w-fit grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
               <InfoCard
-                title="Realistic Strategies"
-                description="No fluff, just proven techniques that work."
+                title="Placement Supreme"
+                description="Flagship 6-month bootcamp with placement assistance."
                 imgSrc="/images/chess-fill.svg"
               />
               <InfoCard
-                title="Beginner Friendly"
-                description="A supportive environment for all skill levels."
+                title="Career Mentorship"
+                description="Free mentorship, mock interviews, and resume support."
                 imgSrc="/images/star-badge.svg"
               />
               <InfoCard
-                title="Comprehensive"
-                description="Covers everything you need, nothing you don't."
+                title="Recorded + Live Learning"
+                description="Recorded sessions plus live support and internship paths."
                 imgSrc="/images/book-education.png"
               />
               <InfoCard
-                title="Affordable"
-                description="High quality prep at a fair price."
+                title="College Partnerships"
+                description="MOU with 5+ colleges; 1000+ learners and 100+ placements."
                 imgSrc="/images/money-bag.webp"
               />
             </div>
           </section>
         </div>
-        <div
-          id="courses"
-          className="scroll-mt-5 bg-gradient-to-b from-[#e7ecf4] to-[#bec9df]"
-        >
+        <div className="bg-gradient-to-b from-[#e7ecf4] to-[#bec9df]">
           <div className="px-fluid-container flex items-center justify-center py-24 lg:min-h-[90vh]">
             <CourseFeaturesCard />
           </div>
-          <section
-            id="private-personalised-tutoring"
-            className="px-fluid-container scroll-mt-16 pt-12 pb-21"
-          >
-            <div className="flex items-center justify-center gap-8 text-[#1F1D39] max-lg:flex-wrap xl:gap-12">
-              <article className="inline-block rounded-2xl bg-white px-6 py-5 text-lg font-[400] shadow-lg shadow-[#1B438F4D] sm:px-8 sm:py-10 md:rounded-3xl md:px-12 md:py-12">
-                <h2 className="text-xl-0 pb-8 text-center leading-tight font-[900] text-[#1B438F]">
-                  Private Personalized Tutoring
-                </h2>
-                <ul className="divide-y divide-[#1B438F33] border-y border-y-[#1B438F33]">
-                  {privatePersonalizedTutoring.map((data, key) => (
-                    <li key={key} className="">
-                      <div
-                        key={`${data}-${key}`}
+
+          <section id="features" className="scroll-mt-32 bg-white pt-21 pb-16">
+            <div className="px-fluid-container">
+              {/* mobile view */}
+              <div className="md:aria-hidden text-[#1F1D39] md:hidden">
+                <article className="w-full">
+                  <h2 className="text-xl-0 pb-8 leading-tight font-[900] text-[#1B438F]">
+                    Programs & Tracks
+                  </h2>
+                  <ul className="mb-8 divide-y divide-[#1B438F33] border-y border-y-[#1B438F33]">
+                    {tableData.map((data, i) => (
+                      <li
+                        key={`${data[0]}-${i}`}
                         className="text-sm-0 px-2.5 py-2 text-pretty"
                       >
                         <div className="flex items-center gap-2.5">
                           <div className="min-h-2.5 min-w-2.5 gap-2.5 rounded-full border border-[#FF9053] bg-[#FF90534D]"></div>
-                          <p>{data}</p>
+                          <p>{data[0]}</p>
                         </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-                <div className="pt-8 pr-2.5 text-white">
-                  <ButtonLink href="/#request-demo-form" label="Know more" />
-                </div>
-              </article>
-              <div id="request-demo-form" className="scroll-mt-28">
-                <LeadGenerationForm />
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="text-white">
+                    <ButtonLink href="#request-demo-form" label="Apply Now" />
+                  </div>
+                </article>
+                <article className="w-full">
+                  <h2 className="text-xl-0 mt-12 pb-8 leading-tight font-[900] text-[#1B438F]">
+                    Career Outcomes
+                  </h2>
+                  <ul className="mb-8 divide-y divide-[#1B438F33] border-y border-y-[#1B438F33]">
+                    {tableData.map((data, i) => (
+                      <li
+                        key={`${data[1]}-${i}`}
+                        className="text-sm-0 px-2.5 py-2 text-pretty"
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <div className="min-h-2.5 min-w-2.5 gap-2.5 rounded-full border border-[#FF9053] bg-[#FF90534D]"></div>
+                          <p>{data[1]}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                  <ButtonLink
+                    href="#"
+                    label="Download brochure"
+                    bgColor="#fff"
+                  />
+                </article>
               </div>
+
+              {/* desktop view */}
+              <table className="max-md:aria-hidden hidden w-full text-[#1F1D39] md:table">
+                <thead>
+                  <tr>
+                    <th className="text-xl-0 pb-8 text-start text-4xl font-[900] text-[#1B438F]">
+                      Programs & Tracks
+                    </th>
+                    <th className="text-xl-0 pb-8 text-start text-4xl font-[900] text-[#1B438F]">
+                      Career Outcomes
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-sm-0">
+                  {tableData.map((row, key) => (
+                    <tr key={key} className="divide-x divide-[#1B438F33]">
+                      {row.map((data, i) => (
+                        <td
+                          key={`${data}-${i}`}
+                          className="border-y border-y-[#1B438F33] px-2.5 py-2"
+                        >
+                          <div className="flex items-center gap-2.5">
+                            <div className="min-h-2.5 min-w-2.5 gap-2.5 rounded-full border border-[#FF9053] bg-[#FF90534D]"></div>
+                            <p>{data}</p>
+                          </div>
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+
+                  <tr>
+                    <td className="py-8 pr-2.5 text-white">
+                      <ButtonLink href="#request-demo-form" label="Apply now" />
+                    </td>
+                    <td className="py-6 pl-2.5">
+                      <ButtonLink
+                        href="#"
+                        label="Download brochure"
+                        bgColor="#fff"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </section>
         </div>
-      </main>
+        <section id="courses" className="bg-[#CFD7E8] py-20 lg:py-28">
+          <div className="px-fluid-container">
+            {/* Courses Grid */}
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {courseData.map((course, index) => (
+                <div
+                  key={index}
+                  className={`group relative flex flex-col rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl`}
+                >
+                  {/* Header Group */}
+                  <div className="mb-6">
+                    <h3 className="flex min-h-[3rem] items-center text-xl leading-tight font-[800] text-[#1B438F]">
+                      {course.title}
+                    </h3>
 
+                    <div className="mt-4 flex items-baseline">
+                      <h4 className="text-3xl font-[900] text-[#1F1D39]">
+                        {course.price}
+                      </h4>
+                      {/* Optional: Add 'per course' or similar here if needed */}
+                    </div>
+                  </div>
+
+                  {/* Divider */}
+                  <hr className="mb-6 border-gray-100" />
+
+                  {/* Features List */}
+                  <ul className="mb-8 flex-1 space-y-4">
+                    {course.features.map((feature, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start text-sm font-[600] text-gray-600"
+                      >
+                        <div className="mr-3 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1B438F]/10">
+                          <svg
+                            className="h-3 w-3 text-[#1B438F]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={3}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        </div>
+                        <span className="leading-snug">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Action Button */}
+                  <div className="text-white">
+                    <ButtonLink href="#request-demo-form" label="Enroll Now" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
       <div className="bg-gradient-to-b from-[#1c4490] to-[#0f2247]">
         <section
           id="testimonials"
           className="relative flex scroll-mt-28 items-center justify-center overflow-hidden pt-8 pb-16 sm:pt-0"
         >
           <TestimonialCarousel testimonialsData={testimonialsData} />
-        </section>
-
-        <section id="instructor" className="scroll-mt-16">
-          <article className="px-fluid-container min-h-[450px] bg-white py-12 sm:pt-21">
-            <div className="flex flex-wrap-reverse justify-center gap-8">
-              <div className="flex aspect-[2.05/1] max-h-72 justify-center overflow-hidden rounded-xl">
-                <img
-                  loading="lazy"
-                  className="w-full object-contain"
-                  src={"/images/score-card.webp"}
-                  alt="Score card"
-                />
-              </div>
-              <div className="col-span-2">
-                <h3 className="text-xl-0 mb-6 font-[900] text-[#1B438F]">
-                  Punit Mishra
-                </h3>
-                <ul className="divide-y divide-[#1B438F33] border-y border-y-[#1B438F33] text-[#1F1D39]">
-                  {about.map((point, index) => (
-                    <li
-                      key={index}
-                      className="text-sm-0 flex items-center gap-2.5 px-2.5 py-2"
-                    >
-                      <div className="min-h-2.5 min-w-2.5 gap-2.5 rounded-full border border-[#FF9053] bg-[#FF90534D]"></div>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </article>
         </section>
       </div>
     </>

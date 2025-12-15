@@ -29,7 +29,7 @@
 }
 
 html {
-  font-size: 87%;
+  font-size: 82%;
 }
 
 aside:has(#menu-btn:checked) p {
@@ -38,4 +38,17 @@ aside:has(#menu-btn:checked) p {
 
 .clip-triangle {
   clip-path: polygon(0% 100%, 100% 100%, 50% 13.4%);
+}
+
+.blink {
+  animation: blink-animation 1s steps(1, start) infinite;
+}
+
+@keyframes blink-animation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }

@@ -6,30 +6,30 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: "/#courses", label: "Universe course" },
+    { href: "/", label: "Home" },
     {
-      href: "/#private-personalised-tutoring",
-      label: "Private personalised tutoring",
+      href: "/#courses",
+      label: "Courses",
     },
-    { href: "/#testimonials", label: "Student results" },
-    { href: "/#instructor", label: "Instructor" },
+    { href: "/#features", label: "Features" },
+    { href: "/#testimonials", label: "Testimonial" },
     { href: "/#request-demo-form", label: "Contact" },
   ];
 
   return (
     <div className="font-montserrat sticky top-0 right-0 left-0 z-60 bg-gradient-to-b from-[#081329] to-[#081329]">
       <nav className="px-fluid-container relative flex items-center justify-between py-6 text-white">
-        <Link href="/" className="text-2xl font-[900]">
-          PM Prep
+        <Link href="/" className="text-center text-xl font-[900]">
+          <div>
+            <p>CODING SAVVY</p>
+            <p className="text-sm">Be a Savvy Coder!</p>
+          </div>
         </Link>
 
-        <ul className="hidden gap-8 text-nav-0 font-[600] capitalize min-[1240px]:flex">
+        <ul className="text-nav-0 hidden gap-8 font-[600] capitalize min-[1240px]:flex">
           {navLinks.map(({ href, label }, index) => (
             <li key={index}>
-              <Link
-                href={href}
-                className="hover:underline"
-              >
+              <Link href={href} className="hover:underline">
                 {label}
               </Link>
             </li>
@@ -38,7 +38,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4">
           <Link
-            href="#"
+            href="https://lms-auth.vercel.app/"
             className="rounded-md border border-white px-3 py-1 text-sm font-[400] lg:text-base"
           >
             Login
@@ -92,34 +92,21 @@ export function FooterNav() {
       <footer className="px-fluid-container bg-black/15 pt-13 text-white backdrop:blur sm:px-8 md:px-12 lg:px-36">
         {/* Header */}
         <div className="mb-5 flex items-center justify-between border-b border-b-white pb-8">
-          <Link href="/" className="text-xl font-[400] md:text-2xl">
-            PM Prep
+          <Link href="/" className="text-center text-xl font-[900]">
+            <div>
+              <p>CODING SAVVY</p>
+              <p className="text-sm">Be a Savvy Coder!</p>
+            </div>
           </Link>
+
+          {/* Social Links */}
           <ul className="flex items-center gap-3 sm:gap-8">
             <li>
-              <Link href="#">
+              <Link href="https://www.instagram.com/codingsavvy/">
                 <img
                   className="h-6 w-6 sm:h-7 sm:w-7 md:h-auto md:w-auto"
                   src="/icons/instagram.svg"
                   alt="Instagram"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <img
-                  className="h-6 w-6 sm:h-7 sm:w-7 md:h-auto md:w-auto"
-                  src="/icons/youtube.svg"
-                  alt="Youtube"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <img
-                  className="h-6 w-6 sm:h-7 sm:w-7"
-                  src="/icons/linkedin-nav.svg"
-                  alt="LinkedIn"
                 />
               </Link>
             </li>
@@ -138,34 +125,16 @@ export function FooterNav() {
                   <Link href={"/"}>Home</Link>
                 </li>
                 <li>
-                  <Link href={"/#courses"}>Universe course</Link>
+                  <Link href={"/#courses"}>Courses</Link>
                 </li>
                 <li>
-                  <Link href={"/#private-personalised-tutoring"}>
-                    Private personalised tutoring
-                  </Link>
+                  <Link href={"/#private-personalised-tutoring"}>Features</Link>
                 </li>
                 <li>
-                  <Link href={"/#testimonials"}>Student results</Link>
+                  <Link href={"/#testimonials"}>Testimonials</Link>
                 </li>
                 <li>
-                  <Link href={"/#instructor"}>Instructor</Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="mb-2 text-lg font-[500] uppercase md:text-xl">
-                Other Links
-              </h4>
-              <ul className="flex flex-wrap gap-3 text-base font-[400] text-[#A19FBA] md:text-lg">
-                <li>
-                  <Link href="/privacy">Privacy Policy</Link>
-                </li>
-                <li>
-                  <Link href="/terms">Terms and Conditions</Link>
-                </li>
-                <li>
-                  <Link href="/refund">Refund and Cancellation Policy</Link>
+                  <Link href={"/#instructor"}>Contact</Link>
                 </li>
               </ul>
             </div>
@@ -174,84 +143,18 @@ export function FooterNav() {
             <div>
               <h4 className="mb-2 text-lg font-[500] md:text-xl">Mail</h4>
               <p className="text-base text-[#A19FBA] md:text-lg">
-                hello@punitmishraprep.com
+                admin@codingsavvy.in
               </p>
             </div>
             <div>
               <h4 className="mb-2 text-lg font-[500] md:text-xl">Phone</h4>
               <p className="text-base font-[400] text-[#A19FBA] md:text-lg">
-                +91 - 9910 917 049
+                +91 - 7498 625 838
               </p>
             </div>
           </div>
         </div>
       </footer>
     </div>
-  );
-}
-
-export function Sidebar() {
-  return (
-    <>
-      <aside className="group row-span-2 inline-block min-h-[100lvh] min-w-24 border-r border-r-[#E5E5E5] bg-white px-6.5 pt-8.5">
-        <label htmlFor="menu-btn" className="mb-8 ml-2 inline-block">
-          <img src="/icons/menu.png" alt="" />
-        </label>
-        <input type="checkbox" id="menu-btn" className="peer hidden" />
-        <nav className="peer-[:not(:checked)]:min-w-44">
-          <ul className="space-y-3">
-            <li>
-              <Link
-                href="#"
-                className="flex items-center gap-2 rounded bg-[#1B438F1A] px-2 py-2"
-              >
-                <img src="/icons/view-grid.png" alt="" />
-                <p>Dashboard</p>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="flex items-center gap-2 rounded px-2 py-2 hover:bg-[#1B438F1A]"
-              >
-                <img src="/icons/class-lesson.png" alt="" />
-                <p>Courses</p>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="flex items-center gap-2 rounded px-2 py-2 hover:bg-[#1B438F1A]"
-              >
-                <img src="/icons/university.png" alt="" />
-                <p>Universites</p>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="flex items-center gap-2 rounded px-2 py-2 hover:bg-[#1B438F1A]"
-              >
-                <img src="/icons/documents.png" alt="" />
-                <p>Documents</p>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="flex items-center gap-2 rounded px-2 py-2 hover:bg-[#1B438F1A]"
-              >
-                <img
-                  className="-ml-1 h-7"
-                  src="/icons/exam-multiple-choice.png"
-                  alt=""
-                />
-                <p>Mock test</p>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-    </>
   );
 }

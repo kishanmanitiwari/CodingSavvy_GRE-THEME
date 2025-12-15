@@ -1,5 +1,5 @@
 {
-  "name": "gre",
+  "name": "coding-savvy",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^16.0.1",
+    "next": "^16.0.10",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "recharts": "^3.3.0"

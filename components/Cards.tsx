@@ -34,23 +34,23 @@ export function Card({ children }: CardProps) {
 
 export function CourseFeaturesCard() {
   const features = [
-    "30 Beginner Videos for Quant",
-    "60+ Hours of Pre-Recorded Classes (Quant/Verbal)",
-    "Full Study Material (1000+ Questions)",
-    "2 Full-Length Adaptive Mock Tests",
-    "1200-Word Vocabulary List",
-    "1-Month and 3-Month Study Plans",
-    "Validity of 3 Months (Extendable)",
+    "Placement Supreme - 6 month flagship with placement assistance.",
+    "Internship Program with project-based learning.",
+    "Java Full Stack Development curriculum.",
+    "DevOps bootcamp covering CI/CD and cloud basics.",
+    "Mobile App Development track.",
+    "Languages: C++, Java, TypeScript, JavaScript, Spring Boot, Next.js, Node.js.",
+    "Recorded sessions + live support and free career mentorship.",
+    "MOU with 5+ colleges; 1000+ learners, 100+ placements.",
   ];
 
   return (
     <Card>
       <h2 className="text-xl-0 mb-3 text-center leading-tight font-[900] text-[#1B438F] uppercase">
-        GRE Universe Course
+        Coding Savvy Programs
       </h2>
       <p className="text-sm-0 sm:text-x text-center font-[600] text-pretty capitalize">
-        Your Entire GRE Universe In One Course — Everything You Need, Nothing
-        You Don't.
+        Coding bootcamps built to get you job-ready
       </p>
 
       <ul className="my-8">
@@ -66,7 +66,7 @@ export function CourseFeaturesCard() {
       </ul>
 
       <div className="text-sm-0 text-white">
-        <ButtonLink href="/#request-demo-form" label="Enroll now" />
+        <ButtonLink href="/#request-demo-form" label="Apply now" />
       </div>
     </Card>
   );
@@ -75,106 +75,47 @@ export function CourseFeaturesCard() {
 interface TestimonialCardProps {
   title: string;
   description: string;
-  greScore: number | `${number}`;
   name: string;
-  linkedin: string;
-  designation: string;
   imgSrc: string;
 }
 
 export function TestimonialCard({
   title,
   description,
-  greScore,
   name,
-  designation,
-  linkedin,
   imgSrc,
 }: TestimonialCardProps) {
   return (
-    <article className="isolate mt-2 grid w-[90%] max-w-4xl grid-cols-10 gap-3 rounded-2xl bg-white px-5 py-3 transition-all ease-in hover:scale-105 sm:gap-12 sm:px-8 sm:py-6 md:px-15 md:py-7 lg:px-12 lg:py-8">
-      <div className="relative col-span-4">
+    <article className="isolate mt-2 flex w-[90%] max-w-4xl flex-col items-center gap-5 rounded-2xl border border-[#E7ECF4] bg-white px-6 py-6 shadow-lg shadow-[#1B438F0D] transition-all duration-300 ease-in hover:scale-105 hover:shadow-2xl hover:shadow-[#1B438F15] sm:flex-row sm:items-stretch sm:gap-8 sm:px-8 sm:py-7 md:px-14 md:py-10 lg:gap-10">
+      <div className="relative flex flex-shrink-0 justify-center sm:w-40 sm:justify-start md:w-48">
         <img
           loading="lazy"
-          className="absolute top-0 -left-5"
+          className="absolute -top-1 -left-1 -z-10 h-6 w-6 sm:-top-3 sm:-left-3 sm:h-10 sm:w-10"
           src="/icons/quote.png"
           alt="quote"
         />
         <img
           loading="lazy"
-          className="absolute top-[10%] h-[calc(90%+min(7vw,70px))] max-w-[100%] rounded-full object-cover"
+          className="h-32 w-32 rounded-full object-cover ring-4 ring-[#1B438F] sm:h-40 sm:w-40 md:h-48 md:w-48"
           src={imgSrc}
           alt={name}
         />
       </div>
-      <section className="col-span-6">
-        <h3 className="text-card-base-1 mb-3 font-[800]">{title}</h3>
-        <p className="text-card-xs-n1 mb-5 font-[400] text-[#626262] italic">
-          {description}
-        </p>
-        <div className="mb-3.5 text-[#1B438F]">
-          <p className="text-card-base-2 base mr-6 inline-block font-[900]">
-            {greScore}/340
+      <section className="flex min-w-0 flex-grow flex-col justify-between">
+        <div>
+          <h3 className="text-card-base-1 mb-3 line-clamp-2 font-[800]">
+            {title}
+          </h3>
+          <p className="text-sm-0 mb-4 line-clamp-4 font-semibold text-[#626262] italic sm:line-clamp-none lg:mb-8">
+            {description}
           </p>
-          <a className="inline-block" href={linkedin} target="_blank">
-            <img
-              loading="lazy"
-              className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-8 lg:w-8"
-              src="/icons/linkedin.svg"
-              alt="LinkedIn"
-            />
-          </a>
         </div>
-        <p className="text-card-xs-1 font-[900]">{name}</p>
-        <p className="text-xs font-[500] text-[#108267] sm:text-sm md:text-base xl:text-lg">
-          {designation}
-        </p>
+        <div>
+          <div className="mb-3">
+            <p className="text-sm-0 truncate font-[900] text-black">{name}</p>
+          </div>
+        </div>
       </section>
-    </article>
-  );
-}
-
-interface CourseCardProps {
-  title: string;
-  articles: number | `${number}`;
-  assignments: number | `${number}`;
-  members: number | `${number}`;
-  imgSrc: string;
-  className: string;
-}
-
-export function CourseCard({
-  title,
-  articles,
-  assignments,
-  members,
-  imgSrc,
-  className,
-}: CourseCardProps) {
-  return (
-    <article className={`flex-grow rounded-lg px-1.5 pt-5 pb-1.5 ${className}`}>
-      <div className="mx-3.5 mb-2">
-        <div className="mb-3.5 flex h-10 w-10 items-center justify-center rounded-full bg-white">
-          <img className="h-6 w-6" src={imgSrc} alt="" />
-        </div>
-        <h4 className="text-sm">{title}</h4>
-      </div>
-      <div className="flex justify-between rounded-md bg-white/70 px-5 py-1">
-        <div className="flex items-center gap-1.5">
-          <img src="/icons/book.png" alt="articles" />
-          <span>{articles}</span>
-        </div>
-        <div className={`${className} min-w-0.5 rounded-full`}></div>
-        <div className="flex items-center gap-1.5">
-          <img src="/icons/tasks.png" alt="assignments" />
-          <span>{assignments}</span>
-        </div>
-        <div className={`${className} min-w-0.5 rounded`}></div>
-        <div className="flex items-center gap-1.5">
-          <img src="/icons/people.png" alt="members" />
-          <span>{members}</span>
-        </div>
-      </div>
     </article>
   );
 }
