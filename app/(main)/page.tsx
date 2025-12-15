@@ -163,8 +163,8 @@ export default function Home() {
                           {/* Mobile: 200px, Tablet: 300px, Desktop: 400px */}
                           <div className="flex h-[200px] w-[200px] items-center justify-center overflow-hidden rounded-full bg-gray-200 shadow-2xl sm:h-[300px] sm:w-[300px] lg:h-[400px] lg:w-[400px]">
                             <img
-                              className="object-cover"
-                              src="/images/coding-savvy.jpeg"
+                              className="object-cover mt-[50%]"
+                              src="/images/kishan.jpeg"
                               alt="Coding Savvy"
                             />
                           </div>
