@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Coding Savvy",
     images: [
       {
-        url: "https://1ea8f57ec50e.ngrok-free.app/images/coding-savvy.jpeg",
+        url: "https://www.codingsavvy.in/images/coding-savvy.jpeg",
         width: 1200,
         height: 630,
         alt: "Coding Savvy",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Coding Savvy",
     description: "Placement-first coding bootcamps for students.",
-    images: ["https://1ea8f57ec50e.ngrok-free.app/images/coding-savvy.jpeg"],
+    images: ["https://www.codingsavvy.in/images/coding-savvy.jpeg"],
   },
 };
 

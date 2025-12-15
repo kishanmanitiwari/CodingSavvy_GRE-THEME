@@ -41,56 +41,56 @@ export default function Home() {
 
   const testimonialsData = [
     {
-      imgSrc: "/images/dummy-modified.png",
+      imgSrc: "/images/dummy-modified.webp",
       title: "A True Game-Changer",
       description:
         "CodingSavvy is a game-changer! The platform's interactive coding challenges and engaging tutorials have significantly boosted my coding skills. I'm now more confident in tackling complex projects.",
       name: "Gaurav",
     },
     {
-      imgSrc: "/images/nupur.png",
+      imgSrc: "/images/nupur.webp",
       title: "Totally Worth It",
       description:
         "It was totally helpful in terms of learning coding, basics of programming, and various other productive things as well. Totally worth it! Happy to be a part of Coding Savvy family.",
       name: "Nupur",
     },
     {
-      imgSrc: "/images/srushti.png",
+      imgSrc: "/images/srushti.webp",
       title: "Fantastic Java Bootcamp",
       description:
         "The Java DSA bootcamp was fantastic! Your clear explanations and practical examples made complex concepts easy to understand. Thank you so much for everything.",
       name: "Srushti",
     },
     {
-      imgSrc: "/images/devesh.png",
+      imgSrc: "/images/devesh.webp",
       title: "Top-Notch Tutorials",
       description:
         "CodingSavvy's tutorials are top-notch. The step-by-step guidance and practical examples make learning complex coding concepts a breeze. I appreciate the platform's commitment to quality education.",
       name: "Devesh",
     },
     {
-      imgSrc: "/images/khushal.jpg",
+      imgSrc: "/images/khushal.webp",
       title: "Simplified Complex Concepts",
       description:
         "CodingSavvy's tutorials simplify complex coding concepts with clear explanations and practical examples. Their commitment to quality education shines through in every lesson.",
       name: "Khushal",
     },
     {
-      imgSrc: "/images/aadesh.png",
+      imgSrc: "/images/aadesh.webp",
       title: "Great for Beginners",
       description:
         "This training of web development is great for beginners because each and every concept is taught from very basic to advance level. Which helped me to understand difficult concepts easily.",
       name: "Aadesh",
     },
     {
-      imgSrc: "/images/saurav.png",
+      imgSrc: "/images/saurav.webp",
       title: "Honed My Skills",
       description:
         "My coding internship was great. I honed my front-end development skills, learned industry best practices, and gained practical experience with daily tasks and projects.",
       name: "Saurav",
     },
     {
-      imgSrc: "/images/nikita.png",
+      imgSrc: "/images/nikita.webp",
       title: "Amazing Internship Training",
       description:
         "This internship training was amazing! I learned new skills in a friendly environment and enjoyed every session. I didn't know much about web development before, but now I've learned a lot.",
@@ -163,8 +163,8 @@ export default function Home() {
                           {/* Mobile: 200px, Tablet: 300px, Desktop: 400px */}
                           <div className="flex h-[200px] w-[200px] items-center justify-center overflow-hidden rounded-full bg-gray-200 shadow-2xl sm:h-[300px] sm:w-[300px] lg:h-[400px] lg:w-[400px]">
                             <img
-                              className="object-cover"
-                              src="/images/coding-savvy.jpeg"
+                              className="object-cover mt-[50%]"
+                              src="/images/kishan.webp"
                               alt="Coding Savvy"
                             />
                           </div>
