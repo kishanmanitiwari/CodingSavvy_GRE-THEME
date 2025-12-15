@@ -27,16 +27,18 @@ interface ButtonLinkProps {
   label: string;
   href: string;
   bgColor?: string;
+  download?: string
 }
 
-export function ButtonLink({ label, href, bgColor }: ButtonLinkProps) {
+export function ButtonLink({ label, href, bgColor, download }: ButtonLinkProps) {
   return (
     <Link
       href={href}
+      download={download}
       className="inline-block w-full rounded-lg bg-gradient-to-t from-[#1b438f] to-[#34a0bd] px-[2px] py-[2px] text-center text-inherit capitalize"
     >
       <span
-        className="inline-block h-full w-full px-3 py-2 rounded-md"
+        className="inline-block h-full w-full rounded-md px-3 py-2"
         style={{ backgroundColor: bgColor }}
       >
         {label}
