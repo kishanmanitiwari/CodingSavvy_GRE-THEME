@@ -11,6 +11,7 @@ export default function Navbar() {
       href: "/#courses",
       label: "Courses",
     },
+    { href: "/#placements", label: "Placements" },
     { href: "/#features", label: "Features" },
     { href: "/#testimonials", label: "Testimonial" },
     { href: "/#request-demo-form", label: "Contact" },
