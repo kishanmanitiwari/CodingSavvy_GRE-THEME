@@ -494,7 +494,7 @@ export default function Home() {
         </section>
         <section
           id="placements"
-          className="font-montserrat relative overflow-hidden bg-gradient-to-b from-[#CFD7E8] to-[#eef2f6] py-20 lg:py-24"
+          className="font-montserrat relative overflow-hidden bg-gradient-to-b from-[#CFD7E8] to-[#eef2f6] pt-0 py-20 lg:pt-14 lg:pb-24"
         >
           <div className="px-fluid-container">
             <h2 className="text-xl-0 mb-10 text-center leading-tight font-[900] text-[#1B438F] capitalize md:mb-16 lg:mb-20">

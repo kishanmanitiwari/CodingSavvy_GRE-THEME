@@ -89,7 +89,7 @@ export default function Navbar() {
 
 export function FooterNav() {
   return (
-    <div className="bg-gradient-to-b from-[#0f2247] to-[#0B172D] pt-20">
+    <div className="bg-gradient-to-b from-[#0f2247] to-[#0B172D]">
       <footer className="px-fluid-container bg-black/15 pt-13 text-white backdrop:blur sm:px-8 md:px-12 lg:px-36">
         {/* Header */}
         <div className="mb-5 flex items-center justify-between border-b border-b-white pb-8">
