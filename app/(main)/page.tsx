@@ -149,6 +149,7 @@ export default function Home() {
       package: "12 LPA",
       quote:
         "Cracked system design rounds with daily mocks and resume rewrites.",
+      role: "Software Developer",
     },
     {
       name: "Shrushti Jalgaonkar",
@@ -156,24 +157,29 @@ export default function Home() {
       package: "5.5 LPA",
       quote:
         "The DSA drills and interview panels felt exactly like the real thing.",
+      role: "Software Developer",
     },
     {
       name: "Aadesh",
       company: "LTI MindTree",
       package: "5.5 LPA",
       quote: "Live code reviews fixed my gaps fast and boosted my confidence.",
+      role: "Software Developer",
     },
     {
       name: "Saraswati",
       company: "LTI MindTree",
       package: "5 LPA",
-      quote: "Weekly checkpoints and peer practice made problem-solving a habit.",
+      quote:
+        "Weekly checkpoints and peer practice made problem-solving a habit.",
+      role: "Software Developer",
     },
     {
       name: "Girish Patil",
       company: "Cognizant",
       package: "5 LPA",
       quote: "Company-specific prep packs and mock HR rounds sealed the deal.",
+      role: "Software Developer",
     },
     {
       name: "Aaditya Shinde",
@@ -181,12 +187,15 @@ export default function Home() {
       package: "4.5 LPA",
       quote:
         "Project storytelling practice helped me stand out in panel interviews.",
+      role: "Associate Software Developer",
     },
     {
       name: "Neha Phadtare",
-      company: "CoreFlex IT Solution’s",
+      company: "CoreFlex IT Solution's",
       package: "4 LPA",
-      quote: "Hands-on sprints and feedback loops kept me sharp for every round.",
+      quote:
+        "Hands-on sprints and feedback loops kept me sharp for every round.",
+      role: "Associate Software Developer",
     },
     {
       name: "Renuka Joshi",
@@ -194,6 +203,7 @@ export default function Home() {
       package: "8 LPA",
       quote:
         "Focused mentorship on system design and behavioral rounds paid off.",
+      role: "Software Developer",
     },
     {
       name: "Aayush",
@@ -201,6 +211,7 @@ export default function Home() {
       package: "4.5 LPA",
       quote:
         "Consistent mock interviews turned interview anxiety into muscle memory.",
+      role: "Associate Software Developer",
     },
   ];
 
@@ -276,7 +287,7 @@ export default function Home() {
             </div>
 
             {/* Form */}
-            <div className="col-span-2 flex items-center justify-center">
+            <div id="request-demo-form" className="col-span-2 flex items-center justify-center scroll-mt-36">
               <LeadGenerationForm />
             </div>
           </section>
@@ -285,7 +296,7 @@ export default function Home() {
             id="about"
             className="px-fluid-container flex flex-col items-center lg:pb-5"
           >
-            <h2 className="text-xl-0 mb-10 text-center leading-tight font-[900] text-[#1B438F] capitalize md:mb-16 lg:mb-20">
+            <h2 className="text-xl-0 mb-10 mt-6 text-center leading-tight font-[900] text-[#1B438F] capitalize md:mb-16 lg:mb-20">
               Why choose Coding Savvy?
             </h2>
             <div className="row-auto grid max-w-fit grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
@@ -417,6 +428,10 @@ export default function Home() {
         </div>
         <section id="courses" className="bg-[#CFD7E8] py-20 lg:py-28">
           <div className="px-fluid-container">
+            <h2 className="text-xl-0 mb-10 text-center leading-tight font-[900] text-[#1B438F] capitalize md:mb-16 lg:mb-20">
+              Courses
+            </h2>
+
             {/* Courses Grid */}
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {courseData.map((course, index) => (
@@ -479,58 +494,59 @@ export default function Home() {
         </section>
         <section
           id="placements"
-          className="bg-gradient-to-b from-[#e7ecf4] to-[#c6d2e8] py-20 lg:py-24"
+          className="font-montserrat relative overflow-hidden bg-gradient-to-b from-[#CFD7E8] to-[#eef2f6] py-20 lg:py-24"
         >
           <div className="px-fluid-container">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-              <div className="max-w-2xl">
-                <p className="text-sm font-[700] uppercase text-[#FF9053] tracking-wide">
-                  Placements
-                </p>
-                <h2 className="text-xl-0 mt-2 leading-tight font-[900] text-[#1B438F]">
-                  Recent success stories
-                </h2>
-                <p className="text-base-0 mt-3 font-[600] text-[#1F1D39]/80">
-                  Placement-first training, mock interviews, and company-specific
-                  prep that get learners hired. More wins are on the way—here are
-                  the latest.
-                </p>
-              </div>
-              <div className="text-white">
-                <ButtonLink href="#request-demo-form" label="Get placement-ready" />
-              </div>
-            </div>
-
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {placements.map((item) => (
-                <article
-                  key={`${item.name}-${item.company}`}
-                  className="group relative rounded-2xl border border-white/50 bg-white/80 p-6 shadow-lg shadow-[#1B438F1A] backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            <h2 className="text-xl-0 mb-10 text-center leading-tight font-[900] text-[#1B438F] capitalize md:mb-16 lg:mb-20">
+              Placements
+            </h2>
+            {/* Grid Layout */}
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {placements.map((item, index) => (
+                <div
+                  key={`${item.name}-${index}`}
+                  className="group relative flex flex-col justify-between rounded-xl border border-gray-100 bg-gray-50 p-8 transition-all duration-500 hover:-translate-y-2 hover:border-[#1B438F]/30 hover:bg-white hover:shadow-[0_20px_40px_-15px_rgba(27,67,143,0.15)]"
                 >
-                  <div className="flex items-center justify-between">
+                  {/* Top Section: Stats */}
+                  <div className="mb-6 flex items-center justify-between">
                     <div>
-                      <p className="text-sm font-[800] uppercase text-[#1B438F]/80 tracking-wide">
-                        Placed at
-                      </p>
-                      <p className="text-lg font-[900] text-[#1F1D39]">
+                      <h3 className="text-xl font-[900] tracking-tight text-[#081329]">
                         {item.company}
-                      </p>
+                      </h3>
+                      <div className="mt-2 h-1 w-8 rounded-full bg-[#1B438F] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                     </div>
-                    <span className="rounded-full bg-[#FF9053]/15 px-3 py-1 text-xs font-[800] text-[#FF9053]">
+                    <div className="rounded-full border border-[#1B438F]/10 bg-[#eef4ff] px-4 py-1.5 text-sm font-[800] tracking-wide text-[#1B438F] shadow-sm transition-colors duration-300 group-hover:bg-[#1B438F] group-hover:text-white">
                       {item.package}
-                    </span>
+                    </div>
                   </div>
-                  <p className="mt-4 text-card-base-0 font-[900] text-[#1B438F]">
-                    {item.name}
-                  </p>
-                  <p className="mt-2 text-sm-0 font-semibold text-[#626262] italic">
-                    {item.quote}
-                  </p>
-                  <div className="mt-4 h-px bg-gradient-to-r from-transparent via-[#1B438F33] to-transparent" />
-                  <p className="mt-3 text-xs font-[700] uppercase tracking-wide text-[#1B438F]/70">
-                    Placement | Mock Interviews | Career Mentorship
-                  </p>
-                </article>
+
+                  {/* Middle Section: Quote */}
+                  <div className="relative mb-8">
+                    {/* Quote Icon */}
+                    {/* <svg
+                      className="absolute -top-3 -left-2 h-8 w-8 -scale-x-100 transform text-gray-300 opacity-40 transition-colors group-hover:text-[#1B438F]/20"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M14.017 21L14.017 18C14.017 16.896 14.321 15.923 14.929 15.081C15.537 14.239 16.307 13.62 17.239 13.224L17.239 12C16.887 12 16.486 11.97 16.036 11.91C14.796 11.75 13.796 11.19 13.036 10.23C12.276 9.27 11.896 8.09 11.896 6.69L11.896 3L21.017 3L21.017 11.58C21.017 14.46 20.212 16.71 18.602 18.33C16.992 19.95 14.797 21 12.017 21L12.017 18L14.017 21ZM5.01697 21L5.01697 18C5.01697 16.896 5.32097 15.923 5.92897 15.081C6.53697 14.239 7.30697 13.62 8.23897 13.224L8.23897 12C7.88697 12 7.48597 11.97 7.03597 11.91C5.79597 11.75 4.79597 11.19 4.03597 10.23C3.27597 9.27 2.89597 8.09 2.89597 6.69L2.89597 3L12.017 3L12.017 11.58C12.017 14.46 11.212 16.71 9.60197 18.33C7.99197 19.95 5.79697 21 3.01697 21L3.01697 18L5.01697 21Z" />
+                    </svg> */}
+                    <p className="relative z-10 pl-1 text-[0.95rem] leading-relaxed font-medium text-gray-600 italic">
+                      "{item.quote}"
+                    </p>
+                  </div>
+
+                  {/* Bottom Section: Name only (Bigger) */}
+                  <div className="border-t border-gray-200 pt-6 transition-colors group-hover:border-[#1B438F]/20">
+                    <div className="flex flex-col">
+                      <span className="text-lg font-[900] text-[#1B438F]">
+                        {item.name}
+                      </span>
+                      <span className="text-[10px] font-bold tracking-widest text-gray-400 uppercase transition-colors group-hover:text-[#1B438F]">
+                        {item.role}
+                      </span>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

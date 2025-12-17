@@ -16,7 +16,7 @@ export function LeadGenerationForm() {
     if (
       !(name?.value && email?.value && contactNumber?.value && course?.value)
     ) {
-      console.log(name.value, email.value, contactNumber.value, course.value)
+      console.log(name.value, email.value, contactNumber.value, course.value);
       setMessage("Please fill in all the fields.");
       setTimeout(() => setMessage(null), 5000);
       return;
@@ -43,7 +43,7 @@ export function LeadGenerationForm() {
         email.value = "";
         contactNumber.value = "";
         course.value = "";
-        setMessage("")
+        setMessage("");
       }, 5000);
     });
   };
@@ -121,27 +121,21 @@ export function LeadGenerationForm() {
               </option>
               <option
                 className="bg-gray-800 text-white"
-                value="Java Fundamentals"
+                value="Placement Supreme"
               >
-                Java Fundamentals
+                Placement Supreme
+              </option>
+              <option className="bg-gray-800 text-white" value="DSA+">
+                DSA+
+              </option>
+              <option className="bg-gray-800 text-white" value="BackendX">
+                BackendX
               </option>
               <option
                 className="bg-gray-800 text-white"
-                value="Placement Preparation in Java"
+                value="Live Industry Project Internship"
               >
-                Placement Prepration in Java
-              </option>
-              <option
-                className="bg-gray-800 text-white"
-                value="Full Stack Web Development"
-              >
-                Full Stack Web Development
-              </option>
-              <option
-                className="bg-gray-800 text-white"
-                value="Mobile App Development"
-              >
-                Mobile App Development
+                Live Industry Project Internship
               </option>
             </select>
 
