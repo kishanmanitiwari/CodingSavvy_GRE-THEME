@@ -140,13 +140,12 @@ function JobApplicationForm({
 
   const closeForm = () => {
     setSelectedJob(null);
-    setResume(null); // Reset file on close
+    setResume(null);
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       setResume(e.target.files[0]);
-      console.log(e.target.files[0]);
     }
   };
 
@@ -183,15 +182,11 @@ function JobApplicationForm({
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     if (!resume) {
-      alert("Please upload your resume first.");
       return;
     }
     // Handle form submission logic here
-    console.log("Submitting form with file:", resume.name);
-    alert("Application Submitted Successfully!");
     closeForm();
   };
 
@@ -381,7 +376,7 @@ function JobApplicationForm({
             Cancel
           </button>
           <div className="text-white">
-            <Button label="Submit" onClick={() => {}} />
+            <Button label="Submit" onClick={handleSubmit} />
           </div>
         </div>
       </form>
