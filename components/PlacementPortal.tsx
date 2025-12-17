@@ -390,7 +390,7 @@ interface JobGridProps {
 }
 
 function JobGrid({ setSelectedJob, filteredJobs }: JobGridProps) {
-  const isLoggedIn = useRef(true);
+  const isLoggedIn = useRef(false);
   const router = useRouter();
 
   const handleApplyClick = (job: Job) => {
