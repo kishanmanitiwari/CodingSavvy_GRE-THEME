@@ -34,6 +34,7 @@ export function Card({ children }: CardProps) {
 
 export function CourseFeaturesCard() {
   const features = [
+    "Industry Internships & Live Projects — Real-world projects facilitated by Coding Savvy with verifiable certification.",
     "Placement Supreme - 6 month flagship with placement assistance.",
     "Internship Program with project-based learning.",
     "Java Full Stack Development curriculum.",
@@ -50,7 +51,7 @@ export function CourseFeaturesCard() {
         Coding Savvy Job Bootcamp
       </h2>
       <p className="text-sm-0 sm:text-x text-center font-[600] text-pretty capitalize">
-        Coding bootcamps built to get you job-ready
+        Job-ready bootcamps & live project facilitation
       </p>
 
       <ul className="my-8">

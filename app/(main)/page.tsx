@@ -302,7 +302,12 @@ export default function Home() {
             <h2 className="text-xl-0 mt-6 mb-10 text-center leading-tight font-[900] text-[#1B438F] capitalize md:mb-16 lg:mb-20">
               Why choose Coding Savvy?
             </h2>
-            <div className="row-auto grid max-w-fit grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
+            <div className="row-auto grid max-w-fit grid-cols-2 gap-3 md:gap-6 lg:grid-cols-5">
+              <InfoCard
+                title="Industry Internships & Live Projects"
+                description="Real-world projects facilitated by Coding Savvy with verifiable certification."
+                imgSrc="/images/star-badge.svg"
+              />
               <InfoCard
                 title="Affordability & Quality"
                 description="Quality Job-focused Education at an affordable price"
