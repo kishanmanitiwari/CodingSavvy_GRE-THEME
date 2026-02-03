@@ -436,28 +436,66 @@ export default function Home() {
         </div>
         <section id="courses" className="bg-[#CFD7E8] py-20 lg:py-28">
           <div className="px-fluid-container">
-            <h2 className="text-xl-0 mb-10 text-center leading-tight font-[900] text-[#1B438F] capitalize md:mb-16 lg:mb-20">
-              Courses
-            </h2>
+            <div className="mb-10 md:mb-16 lg:mb-20">
+              <h2 className="text-xl-0 mb-3 text-center leading-tight font-[900] text-[#1B438F] capitalize">
+                Programs & Industry Projects
+              </h2>
+              <p className="text-center text-base font-[600] text-[#1B438F]/80 max-w-2xl mx-auto leading-relaxed">
+                Real-world live projects facilitated by Coding Savvy with verifiable certification. Build industry-ready skills through hands-on experience.
+              </p>
+              <div className="mt-6 flex justify-center gap-4 flex-wrap">
+                <div className="flex items-center gap-2 rounded-lg bg-white/80 px-4 py-2 shadow-sm">
+                  <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                  <span className="text-sm font-semibold text-[#1B438F]">100+ Live Projects</span>
+                </div>
+                <div className="flex items-center gap-2 rounded-lg bg-white/80 px-4 py-2 shadow-sm">
+                  <svg className="h-4 w-4 text-[#FF9053]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm font-semibold text-[#1B438F]">Verifiable Certificates</span>
+                </div>
+              </div>
+            </div>
 
             {/* Courses Grid */}
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {courseData.map((course, index) => (
                 <div
                   key={index}
-                  className={`group relative flex flex-col rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl`}
+                  className={`group relative flex flex-col rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
+                    course.title.includes("Industry Project") 
+                      ? "ring-2 ring-[#FF9053]/30 hover:ring-[#FF9053]/50" 
+                      : ""
+                  }`}
                 >
+                  {/* Industry Project Badge */}
+                  {course.title.includes("Industry Project") && (
+                    <div className="absolute -top-3 right-4">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#FF9053] to-[#FF9053]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-md">
+                        <span className="relative flex h-1.5 w-1.5">
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"></span>
+                          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white"></span>
+                        </span>
+                        Live Project
+                      </span>
+                    </div>
+                  )}
+                  
                   {/* Header Group */}
                   <div className="mb-6">
                     <h3 className="flex min-h-[3rem] items-center text-xl leading-tight font-[800] text-[#1B438F]">
                       {course.title}
                     </h3>
 
-                    <div className="mt-4 flex items-baseline">
+                    <div className="mt-4 flex items-baseline gap-2">
                       <h4 className="text-3xl font-[900] text-[#1F1D39]">
                         {course.price}
                       </h4>
-                      {/* Optional: Add 'per course' or similar here if needed */}
+                      {course.title.includes("Industry Project") && (
+                        <span className="text-xs font-semibold text-[#FF9053] uppercase tracking-wide">
+                          Verifiable Cert
+                        </span>
+                      )}
                     </div>
                   </div>
 
