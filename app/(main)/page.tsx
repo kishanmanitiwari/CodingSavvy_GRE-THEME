@@ -281,7 +281,7 @@ export default function Home() {
               {/* Image */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="absolute aspect-square h-[62.5%] overflow-hidden rounded-full">
-                  <img src="/images/kishan.webp" alt="" />
+                  <img src="/images/kishans.webp" alt="" />
                 </div>
               </div>
             </div>
