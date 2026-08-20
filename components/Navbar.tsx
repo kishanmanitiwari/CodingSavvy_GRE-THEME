@@ -148,7 +148,7 @@ export function FooterNav() {
             <div>
               <h4 className="mb-2 text-lg font-[500] md:text-xl">Mail</h4>
               <p className="text-base text-[#A19FBA] md:text-lg">
-                admin@codingsavvy.in
+                hr.codingsavvy@gmail.com
               </p>
             </div>
             <div>
